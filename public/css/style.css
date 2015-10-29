@@ -1,0 +1,14 @@
+
+div.main-content {
+    float:left;
+    width:620px;
+}
+aside {
+    float:right;
+    width:180px;
+}
+footer {
+    clear:both;
+    text-align: center;
+    font-size: 80%;
+}

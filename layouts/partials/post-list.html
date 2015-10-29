@@ -1,0 +1,12 @@
+    {{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Type" "post") }}
+        {{ range $paginator.Pages }}<article class="post">
+            <h2 class="post-title">
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </h2>
+            <div class="post-content">
+                <p>
+                    {{ .Summary }}
+                </p>
+            </div>
+        </article>
+        {{ end }}
