@@ -4,13 +4,13 @@
     <meta charset="utf-8">
 {{ partial "meta" . }}
     
-    <base href="{{ .Site.BaseURL }}">
     <title>{{ if eq .Title .Site.Title }}
+    <base href="{{ .Site.BaseURL }}">
       {{ .Title }}
     {{ else }}
       {{ .Title }} - {{ .Site.Title }}
     {{ end }}</title>
-    <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}/css/style.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/css/style.css" media="all">
     <link rel="canonical" href="{{ .Permalink }}">
     {{ if .RSSlink }}<link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Title }}" />{{ end }}
     
@@ -20,7 +20,9 @@
         <h1><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
     </header>
     <nav>
-        <p><a href="/about/">about</a></p>
-        <p><a href="{{ .Site.Params.twitter_url }}" target="_blank">twitter</a></p>
-        <p><a href="{{ .Site.Params.github_url }}" target="_blank">github</a></p>
+        <ul>
+        <il><a href="/about/">about</a></il>
+        <il><a href="{{ .Site.Params.twitter_url }}" target="_blank">twitter</a></il>
+        <il><a href="{{ .Site.Params.github_url }}" target="_blank">github</a></il>
+        </ul>
     </nav>
