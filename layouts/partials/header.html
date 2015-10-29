@@ -4,8 +4,8 @@
     <meta charset="utf-8">
 {{ partial "meta" . }}
     
-    <title>{{ if eq .Title .Site.Title }}
     <base href="{{ .Site.BaseURL }}">
+    <title>{{ if eq .Title .Site.Title }}
       {{ .Title }}
     {{ else }}
       {{ .Title }} - {{ .Site.Title }}
