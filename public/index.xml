@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>わたしろぐ</title>
-    <link>http://replace-this-with-your-hugo-site.com/</link>
+    <link>http://tatamo.github.io/blog/public/</link>
     <description>Recent content on わたしろぐ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Wed, 28 Oct 2015 23:13:42 +0900</lastBuildDate>
-    <atom:link href="http://replace-this-with-your-hugo-site.com/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://tatamo.github.io/blog/public/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>test 2</title>
-      <link>http://replace-this-with-your-hugo-site.com/post/2015-10-28_secod/</link>
+      <link>http://tatamo.github.io/blog/public/post/2015-10-28_secod/</link>
       <pubDate>Wed, 28 Oct 2015 23:13:42 +0900</pubDate>
       
-      <guid>http://replace-this-with-your-hugo-site.com/post/2015-10-28_secod/</guid>
+      <guid>http://tatamo.github.io/blog/public/post/2015-10-28_secod/</guid>
       <description>&lt;p&gt;blah blah
 blah blah
 blah blah blah blah&amp;hellip;&lt;/p&gt;
@@ -23,10 +23,10 @@ blah blah blah blah&amp;hellip;&lt;/p&gt;
     
     <item>
       <title>About</title>
-      <link>http://replace-this-with-your-hugo-site.com/about/</link>
+      <link>http://tatamo.github.io/blog/public/about/</link>
       <pubDate>Wed, 28 Oct 2015 21:21:25 +0900</pubDate>
       
-      <guid>http://replace-this-with-your-hugo-site.com/about/</guid>
+      <guid>http://tatamo.github.io/blog/public/about/</guid>
       <description>
 
 &lt;h2 id=&#34;about-me:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;about me&lt;/h2&gt;

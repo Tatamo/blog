@@ -10,7 +10,7 @@
     {{ else }}
       {{ .Title }} - {{ .Site.Title }}
     {{ end }}</title>
-    <link rel="stylesheet" type="text/css" href="/css/style.css" media="all">
+    <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}/css/style.css" media="all">
     <link rel="canonical" href="{{ .Permalink }}">
     {{ if .RSSlink }}<link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Title }}" />{{ end }}
     
