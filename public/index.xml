@@ -2,126 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>わたしろぐ</title>
-    <link>http://localhost:1313/</link>
+    <link>http://replace-this-with-your-hugo-site.com/</link>
     <description>Recent content on わたしろぐ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 29 Oct 2015 01:01:49 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>19</title>
-      <link>http://localhost:1313/post/19/</link>
-      <pubDate>Thu, 29 Oct 2015 01:01:49 +0900</pubDate>
-      
-      <guid>http://localhost:1313/post/19/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>18</title>
-      <link>http://localhost:1313/post/18/</link>
-      <pubDate>Thu, 29 Oct 2015 01:01:47 +0900</pubDate>
-      
-      <guid>http://localhost:1313/post/18/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>17</title>
-      <link>http://localhost:1313/post/17/</link>
-      <pubDate>Thu, 29 Oct 2015 01:01:43 +0900</pubDate>
-      
-      <guid>http://localhost:1313/post/17/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>16</title>
-      <link>http://localhost:1313/post/16/</link>
-      <pubDate>Thu, 29 Oct 2015 01:01:41 +0900</pubDate>
-      
-      <guid>http://localhost:1313/post/16/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>15</title>
-      <link>http://localhost:1313/post/15/</link>
-      <pubDate>Thu, 29 Oct 2015 01:01:37 +0900</pubDate>
-      
-      <guid>http://localhost:1313/post/15/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>14</title>
-      <link>http://localhost:1313/post/14/</link>
-      <pubDate>Thu, 29 Oct 2015 01:01:35 +0900</pubDate>
-      
-      <guid>http://localhost:1313/post/14/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>13</title>
-      <link>http://localhost:1313/post/13/</link>
-      <pubDate>Thu, 29 Oct 2015 01:01:32 +0900</pubDate>
-      
-      <guid>http://localhost:1313/post/13/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>12</title>
-      <link>http://localhost:1313/post/12/</link>
-      <pubDate>Thu, 29 Oct 2015 01:01:29 +0900</pubDate>
-      
-      <guid>http://localhost:1313/post/12/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>11</title>
-      <link>http://localhost:1313/post/11/</link>
-      <pubDate>Thu, 29 Oct 2015 01:01:26 +0900</pubDate>
-      
-      <guid>http://localhost:1313/post/11/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>sample</title>
-      <link>http://localhost:1313/sample/</link>
-      <pubDate>Thu, 29 Oct 2015 00:26:44 +0900</pubDate>
-      
-      <guid>http://localhost:1313/sample/</guid>
-      <description>
-
-&lt;h1 id=&#34;1-見出し1です-1つ-h1タグ:7cce010dc015a937e6841b4e289c7b7d&#34;&gt;1. 見出し1です。#1つ=h1タグ&lt;/h1&gt;
-
-&lt;p&gt;本文を書きます。
-単なる改行では文章はそのまま続きます。&lt;/p&gt;
-
-&lt;h2 id=&#34;1-1-小見出し1です-h2タグ:7cce010dc015a937e6841b4e289c7b7d&#34;&gt;1-1. 小見出し1です。##=h2タグ&lt;/h2&gt;
-
-&lt;p&gt;文章を入れます。&lt;/p&gt;
-
-&lt;p&gt;2つ改行がはいると、pタグで段落分けされます。&lt;/p&gt;
-
-&lt;h1 id=&#34;2-見出し2だよ:7cce010dc015a937e6841b4e289c7b7d&#34;&gt;2. 見出し2だよ&lt;/h1&gt;
-
-&lt;p&gt;文章を入れます。&lt;br /&gt;
-改行前に半角スペースを二つ入れておくとbrタグが挿入され、改行になります。&lt;/p&gt;
-</description>
-    </item>
+    <lastBuildDate>Wed, 28 Oct 2015 23:13:42 +0900</lastBuildDate>
+    <atom:link href="http://replace-this-with-your-hugo-site.com/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>test 2</title>
-      <link>http://localhost:1313/post/2015-10-28_secod/</link>
+      <link>http://replace-this-with-your-hugo-site.com/post/2015-10-28_secod/</link>
       <pubDate>Wed, 28 Oct 2015 23:13:42 +0900</pubDate>
       
-      <guid>http://localhost:1313/post/2015-10-28_secod/</guid>
+      <guid>http://replace-this-with-your-hugo-site.com/post/2015-10-28_secod/</guid>
       <description>&lt;p&gt;blah blah
 blah blah
 blah blah blah blah&amp;hellip;&lt;/p&gt;
@@ -129,27 +22,11 @@ blah blah blah blah&amp;hellip;&lt;/p&gt;
     </item>
     
     <item>
-      <title>てすと</title>
-      <link>http://localhost:1313/post/2015-10-28_first/</link>
-      <pubDate>Wed, 28 Oct 2015 21:50:56 +0900</pubDate>
-      
-      <guid>http://localhost:1313/post/2015-10-28_first/</guid>
-      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
-
-&lt;p&gt;Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
-
-&lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.&lt;/p&gt;
-
-&lt;p&gt;Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>About</title>
-      <link>http://localhost:1313/about/</link>
+      <link>http://replace-this-with-your-hugo-site.com/about/</link>
       <pubDate>Wed, 28 Oct 2015 21:21:25 +0900</pubDate>
       
-      <guid>http://localhost:1313/about/</guid>
+      <guid>http://replace-this-with-your-hugo-site.com/about/</guid>
       <description>
 
 &lt;h2 id=&#34;about-me:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;about me&lt;/h2&gt;
