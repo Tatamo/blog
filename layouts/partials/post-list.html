@@ -1,4 +1,4 @@
-    {{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Type" "post") }}
+    {{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Type" "post") 2 }}
         {{ range $paginator.Pages }}<article class="post">
             <h2 class="post-title">
                 <a href="{{ .Permalink }}">{{ .Title }}</a>
