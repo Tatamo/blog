@@ -3,6 +3,12 @@ div.main-content {
     float:left;
     width:620px;
 }
+
+nav ul, nav li {
+	list-style-type:none;
+	display:inline;
+}
+
 aside {
     float:right;
     width:180px;
