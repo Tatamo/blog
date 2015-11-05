@@ -1,10 +1,11 @@
-{{ partial "header.html" . }}
+{{ partial "header" . }}
 
-<div class="site-content">  
+<div class="main-content">  
     <article>
         <h2>{{ .Title }}</h2>
         {{ .Content }}
         <p><time>{{ .Date }}</time></p>
     </article>
 </div>
-{{ partial "footer.html" . }}
+{{ partial "sidebar" . }}
+{{ partial "footer" . }}
