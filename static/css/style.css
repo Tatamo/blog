@@ -23,17 +23,24 @@ a:visited { color: #0000ff; }
 }
 
 nav ul, nav li {
-	list-style-type:none;
-	display:inline;
+    list-style-type:none;
+    display:inline;
+}
+
+/* layout */
+.container{
+    display: flex;
+}
+
+.main-content{
+    flex: 1;
 }
 
 aside {
-    float:right;
-    #width:220px;
+    width:220px;
 }
 
 footer {
-    clear:both;
     text-align: center;
     font-size: 80%;
 }

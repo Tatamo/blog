@@ -1,6 +1,4 @@
 {{ partial "header" . }}
-
-<div class="main-content">
     <article><br>
         <h1 class="article-title">{{ .Title }}</h1>
         <span class="article-datetime"><time>{{ .Date.Format "2006-01-02 15:04:05" }}</time></span>
@@ -9,7 +7,5 @@
         {{ end }}</p>{{ end }}
         {{ .Content }}
     </article>
-</div>
-{{ partial "sidebar" . }}
 {{ partial "footer" . }}
 
