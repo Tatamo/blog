@@ -9,7 +9,7 @@
         <section>
             <h2 class="panel-title">Tags</h2>
             <ul>
-            {{ range $name, $value := .Site.Taxonomies.tags }}<li><a href="{{ $baseurl }}/tags/{{ $name | urlize }}">{{ $name }} <span class="badge">({{ .Count }})</span></a></li>
+            {{ range $name, $value := .Site.Taxonomies.tags }}<li><a href="/tags/{{ $name | urlize }}">{{ $name }} ({{ .Count }})</a></li>
             {{ end }}</ul>
         </section>
     </aside>

@@ -2,19 +2,33 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hoge on わたしろぐ</title>
-    <link>http://localhost:1313/blog/public/tags/hoge/</link>
+    <link>http://tatamo.github.io/blog/public/tags/hoge/</link>
     <description>Recent content in Hoge on わたしろぐ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 28 Oct 2015 23:13:42 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/blog/public/tags/hoge/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 Nov 2015 21:54:09 +0900</lastBuildDate>
+    <atom:link href="http://tatamo.github.io/blog/public/tags/hoge/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Title</title>
+      <link>http://tatamo.github.io/blog/public/post/5th/</link>
+      <pubDate>Thu, 05 Nov 2015 21:54:09 +0900</pubDate>
+      
+      <guid>http://tatamo.github.io/blog/public/post/5th/</guid>
+      <description>
+
+&lt;h2 id=&#34;the-5th-article:5b0eb8414aaeb963f69b61ff525afbb8&#34;&gt;The 5th Article&lt;/h2&gt;
+
+&lt;p&gt;this article is posted at 2015-11-05 21:54.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>2nd</title>
-      <link>http://localhost:1313/blog/public/post/2015-10-28_secod/</link>
+      <link>http://tatamo.github.io/blog/public/post/2015-10-28_secod/</link>
       <pubDate>Wed, 28 Oct 2015 23:13:42 +0900</pubDate>
       
-      <guid>http://localhost:1313/blog/public/post/2015-10-28_secod/</guid>
+      <guid>http://tatamo.github.io/blog/public/post/2015-10-28_secod/</guid>
       <description>&lt;p&gt;blah blah
 blah blah
 blah blah blah blah&amp;hellip;&lt;/p&gt;

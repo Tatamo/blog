@@ -1,7 +1,25 @@
 
-div.main-content {
+a:link { color: #0000ff; }
+a:visited { color: #0000ff; }
+
+.site-title {
+    text-shadow: -1px 1px 0 rgba(0,0,0,0.1);
+}
+.site-title a {
+        text-decoration: none;
+        color: #000000;
+}
+.site-title a:hover {
+        text-decoration: underline;
+}
+
+.main-content {
     float:left;
     width:620px;
+}
+
+.post-list-datetime {
+	font-size: 80%;
 }
 
 nav ul, nav li {
@@ -13,6 +31,7 @@ aside {
     float:right;
     #width:220px;
 }
+
 footer {
     clear:both;
     text-align: center;
