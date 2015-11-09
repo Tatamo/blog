@@ -22,10 +22,21 @@ a:visited { color: #0000ff; }
     width:620px;
 }
 
-.post-list-datetime {
-    font-size: 80%;
+.post-list-title {
+	margin-bottom: 0px;
 }
 
+.post-list-datetime {
+    font-size: 12px;
+}
+
+.article-title {
+	margin-bottom: 0px;
+}
+
+.article-datetime {
+	font-size: 12px;
+}
 
 body{
     margin: 0;
