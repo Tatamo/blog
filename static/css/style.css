@@ -3,87 +3,118 @@ a:link { color: #0000ff; }
 a:visited { color: #0000ff; }
 
 .site-title {
-    text-shadow: -1px 1px 0 rgba(0,0,0,0.1);
+	text-shadow: -1px 1px 0 rgba(0,0,0,0.1);
+	font-size: 42px;
+	font-size: 42px;
 }
+
 .site-title a {
-    text-decoration: none;
-    color: #000000;
+	text-decoration: none;
+	color: #000000;
 }
+
 .site-title a:hover {
-    text-decoration: underline;
+	text-decoration: underline;
 }
 
 .container {
-    padding: 1em;
+	padding: 1em;
 }
 
 .main-content {
-    float:left;
-    width:620px;
+	float: left;
+	width: 620px;
+}
+
+article.post-list-article {
+	padding-top: 0px;
+	padding-bottom: 20px;
 }
 
 .post-list-title {
+	margin-top: 0px;
 	margin-bottom: 0px;
+	font-size: 32px;
 }
 
 .post-list-datetime {
-    font-size: 12px;
+	font-size: 12px;
+}
+
+.post-list-tags {
+	margin-top: 0px;
 }
 
 .article-title {
+	margin-top: 0px;
 	margin-bottom: 0px;
+	font-size: 32px;
+}
+
+.article-title a {
+	text-decoration: none;
+	color: #000000;
+}
+
+.article-title a:hover {
+	text-decoration: underline;
 }
 
 .article-datetime {
 	font-size: 12px;
 }
 
-body{
-    margin: 0;
-    padding: 0;
+.article-tags {
+	margin-top: 0px;
+}
+
+body { 
+	margin: 0;
+	padding: 0;
 }
 
 header {
-    padding: 1em;
-    background: #ccc;
+	padding: 1em;
+	background: #ccc;
 }
 
 .head-nav {
-    padding: 1em;
-    background: #ddd;
+	padding: 1em;
+	background: #ddd;
 }
 
 nav ul {
-    list-style-type: none;
-    display: inline;
-    padding: 0
+	list-style-type: none;
+	display: inline;
+	padding: 0
 }
 
 nav li {
-    list-style-type:none;
-    display:inline;
-    margin-right:6px;
+	list-style-type:none;
+	display:inline;
+	margin-right:6px;
 }
 
 nav li+li {
-    padding-left: 10px;
-    border-left: 1px solid #666
+	padding-left: 10px;
+	border-left: 1px solid #666
 }
 
 footer {
-    text-align: center;
-    font-size: 80%;
+	text-align: center;
+	font-size: 80%;
 }
 
 /* layout */
 .container{
-    display: flex;
+	display: flex;
 }
 
 .main-content{
-    flex: 1;
+	flex: 1;
 }
 
 aside {
-    width:220px;
+	width:220px;
 }
+

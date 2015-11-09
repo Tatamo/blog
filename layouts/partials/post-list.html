@@ -1,7 +1,9 @@
         {{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Type" "post") 2 }}
-        {{ range $paginator.Pages }}<article class="post">
+        {{ range $paginator.Pages }}<article class="post-list-article">
             <h2 class="post-list-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
             <span class="post-list-datetime"><time>{{ .Date.Format "2006-01-02 15:04:05" }}</time></span>
+        {{ with .Params.tags }}<p class="post-list-tags">Tags:{{ range . }}
+        <a href="/tags/{{ . | urlize}}/">{{ . }}</a>{{ end }}</p>{{ end }}
             <div class="post-content">
                 <p>
                     {{ .Summary }}
