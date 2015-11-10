@@ -10,7 +10,7 @@ a:visited { color: #0000ff; }
 
 .site-title a {
 	text-decoration: none;
-	color: #000000;
+	color: #440000;
 }
 
 .site-title a:hover {
@@ -18,7 +18,7 @@ a:visited { color: #0000ff; }
 }
 
 .container {
-	padding: 1em;
+	padding: 16px;
 }
 
 .main-content {
@@ -27,9 +27,14 @@ a:visited { color: #0000ff; }
 }
 
 article.post-list-article {
-	padding-top: 0px;
-	padding-bottom: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px dashed #333;
 }
+
+/*article.post-list-article + article.post-list-article {
+	border-top: 1px dashed #333;
+}*/
 
 .post-list-title {
 	margin-top: 0px;
@@ -68,19 +73,24 @@ article.post-list-article {
 	margin-top: 0px;
 }
 
+nav.pagination {
+	margin-top: 16px;
+	margin-bottom: 16px;
+}
+
 body { 
 	margin: 0;
-	padding: 0;
+	padding: 0px 8px;
 }
 
 header {
-	padding: 1em;
-	background: #ccc;
+	padding: 16px;
+	background: #CCC;
 }
 
 .head-nav {
-	padding: 1em;
-	background: #ddd;
+	padding: 4px 16px;
+	background: #DDD;
 }
 
 nav ul {
