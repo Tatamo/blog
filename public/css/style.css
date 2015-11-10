@@ -26,6 +26,23 @@ a:visited { color: #0000ff; }
 	width: 620px;
 }
 
+.tag-list-title {
+	font-size: 36px;
+	padding-bottom: 8px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	border-bottom: 1px dashed #CCC;
+}
+
+.tag-list-title a {
+	text-decoration: none;
+	color: #000000;
+}
+
+.tag-list-title a:hover {
+	text-decoration: underline;
+}
+
 article.post-list-article {
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -39,26 +56,26 @@ article.post-list-article + nav.pagination {
 	border-top: 1px dashed #CCC;
 }
 
-.post-list-title {
+.post-list-article-title {
 	margin-top: 0px;
 	margin-bottom: 0px;
 	font-size: 32px;
 }
 
-.post-list-title a {
+.post-list-article-title a {
 	text-decoration: none;
 	color: #000000;
 }
 
-.post-list-title a:hover {
+.post-list-article-title a:hover {
 	text-decoration: underline;
 }
 
-.post-list-datetime {
+.post-list-article-datetime {
 	font-size: 12px;
 }
 
-.post-list-tags {
+.post-list-article-tags {
 	margin-top: 0px;
 }
 

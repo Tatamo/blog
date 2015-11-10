@@ -1,4 +1,7 @@
 {{ partial "header" . }}
+        <section>
+            <h1 class="tag-list-title"><a href="{{ .Permalink }}">Tag: {{ .Title }}</a></h1>
+        </section>
 {{ partial "post-list" . }}
 {{ partial "pagination" . }}
 {{ partial "footer" . }}
