@@ -1,10 +1,15 @@
 {{ partial "header" . }}
-    <article>
+    <article class="article">
         <h1 class="article-title"><a href="{{.Permalink}}">{{ .Title }}</a></h1>
         <span class="article-datetime"><time>{{ .Date.Format "2006-01-02 15:04:05" }}</time></span>
-        {{ with .Params.tags }}<p class="article-tags">Tags:{{ range . }} 
+        {{ with .Params.tags }}<p class="article-tags">Tags:{{ range . }}
         <a href="/tags/{{ . | urlize}}/">{{ . }}</a>{{ end }}</p>{{ end }}
         {{ .Content }}
     </article>
+    {{ if or .PrevInSection .NextInSection }}<nav class="article-nav-adjacent">{{ if .NextInSection }}
+		<span class="article-link-next"><a href="{{ .NextInSection.Permalink }}">{{ .NextInSection.Title }}</a></span>{{ end }}{{ if .PrevInSection }}
+		<span class="article-link-prev"><a href="{{ .PrevInSection.Permalink }}">{{ .PrevInSection.Title }}</a></span>{{ end }}
+    </nav>{{ end }}
+
 {{ partial "footer" . }}
 

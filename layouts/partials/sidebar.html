@@ -1,15 +1,17 @@
-    <aside>
-        <section>
-            <h2 class="panel-title">Recent Posts</h2>
-            <ul>
-            {{range first 6 (where .Site.Pages "Type" "post")}}<li><a href="{{.Permalink}}" class="list-group-item">{{ .Title }}</a></li>
-            {{ end }}</ul>
-        </section>
-        {{ $baseurl := .Site.BaseURL }}
-        <section>
-            <h2 class="panel-title">Tags</h2>
-            <ul>
-            {{ range $name, $value := .Site.Taxonomies.tags }}<li><a href="/tags/{{ $name | urlize }}">{{ $name }} ({{ .Count }})</a></li>
-            {{ end }}</ul>
-        </section>
+    <aside class="sidebar">
+        <div class="sidebar-content">
+            <section>
+                <h2 class="panel-title">Recent Posts</h2>
+                <ul>
+                {{range first 6 (where .Site.Pages "Type" "post")}}<li><a href="{{.Permalink}}" class="list-group-item">{{ .Title }}</a></li>
+                {{ end }}</ul>
+            </section>
+            {{ $baseurl := .Site.BaseURL }}
+            <section>
+                <h2 class="panel-title">Tags</h2>
+                <ul>
+                {{ range $name, $value := .Site.Taxonomies.tags }}<li><a href="/tags/{{ $name | urlize }}">{{ $name }} ({{ .Count }})</a></li>
+                {{ end }}</ul>
+            </section>
+        </div>
     </aside>
