@@ -7,8 +7,9 @@
         {{ .Content }}
     </article>
     {{ if or .PrevInSection .NextInSection }}<nav class="article-nav-adjacent">{{ if .NextInSection }}
-		<span class="article-link-next"><a href="{{ .NextInSection.Permalink }}">{{ .NextInSection.Title }}</a></span>{{ end }}{{ if .PrevInSection }}
-		<span class="article-link-prev"><a href="{{ .PrevInSection.Permalink }}">{{ .PrevInSection.Title }}</a></span>{{ end }}
+        <span class="article-link-next"><a href="{{ .NextInSection.Permalink }}">&lt;- Newer: {{ .NextInSection.Title }}</a></span>{{ end }}
+        <span class="article-link-border"></span>{{ if .PrevInSection }}
+        <span class="article-link-prev"><a href="{{ .PrevInSection.Permalink }}">Older: {{ .PrevInSection.Title }} -&gt;</a></span>{{ end }}
     </nav>{{ end }}
 
 {{ partial "footer" . }}
