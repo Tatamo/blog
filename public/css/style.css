@@ -76,8 +76,16 @@ article.post-list-article + nav.pagination {
 	color: #666;
 }
 
+.post-list-article-categories {
+	margin-top: 0px;
+}
+
 .post-list-article-tags {
 	margin-top: 0px;
+}
+
+.post-list-article-categories + .post-list-article-tags {
+	margin-top: -16px;
 }
 
 article.article {
@@ -104,8 +112,16 @@ article.article {
 	color: #666;
 }
 
+.article-categories {
+	margin-top: 0px;
+}
+
 .article-tags {
 	margin-top: 0px;
+}
+
+.article-categories + .article-tags {
+	margin-top: -16px;
 }
 
 article.article + .article-nav-adjacent {

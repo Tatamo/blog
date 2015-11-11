@@ -8,9 +8,9 @@
             </section>
             {{ $baseurl := .Site.BaseURL }}
             <section>
-                <h2 class="panel-title">Tags</h2>
+                <h2 class="panel-title">Categories</h2>
                 <ul>
-                {{ range $name, $value := .Site.Taxonomies.tags }}<li><a href="/tags/{{ $name | urlize }}">{{ $name }} ({{ .Count }})</a></li>
+                {{ range $name, $value := .Site.Taxonomies.categories }}<li><a href="/categories/{{ $name | urlize }}">{{ $name }} ({{ .Count }})</a></li>
                 {{ end }}</ul>
             </section>
         </div>
