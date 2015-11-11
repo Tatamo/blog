@@ -2,7 +2,7 @@
 {{ partial "sidebar" . }}
     </div>
    <footer>
-        <p>Copyright (c) <a href="about/">{{ .Site.Params.author }}</a>.</p>
+        <p>Copyright (c){{ if .Site.Params.copyright_since }}{{ if not ( eq .Site.Params.copyright_since .Site.Params.copyright_latest ) }} {{ .Site.Params.copyright_since }} - {{ .Site.Params.copyright_latest }}{{ else }} {{ .Site.Params.copyright_since }}{{ end }}{{ end }} <a href="about/">{{ .Site.Params.author }}</a>.</p>
         <p>Powered by <a href="http://gohugo.io" target="_blank">Hugo</a></p>
     </footer>
 </body>
