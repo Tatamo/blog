@@ -1,6 +1,6 @@
 
-a:link { color: #0000ff; }
-a:visited { color: #0000ff; }
+a:link { color: #00F; }
+a:visited { color: #00F; }
 
 .site-title {
 	text-shadow: -1px 1px 0 rgba(0,0,0,0.1);
@@ -10,7 +10,7 @@ a:visited { color: #0000ff; }
 
 .site-title a {
 	text-decoration: none;
-	color: #000000;
+	color: #000;
 }
 
 .site-title a:hover {
@@ -31,12 +31,12 @@ a:visited { color: #0000ff; }
 	padding-bottom: 8px;
 	margin-top: 0px;
 	margin-bottom: 0px;
-	border-bottom: 1px dashed #CCC;
+	border-bottom: 1px dashed #AAA;
 }
 
 .tag-list-title a {
 	text-decoration: none;
-	color: #000000;
+	color: #000;
 }
 
 .tag-list-title a:hover {
@@ -49,11 +49,11 @@ article.post-list-article {
 }
 
 article.post-list-article + article.post-list-article {
-	border-top: 1px dashed #CCC;
+	border-top: 1px dashed #AAA;
 }
 
 article.post-list-article + nav.pagination {
-	border-top: 1px dashed #CCC;
+	border-top: 1px dashed #AAA;
 }
 
 .post-list-article-title {
@@ -64,7 +64,7 @@ article.post-list-article + nav.pagination {
 
 .post-list-article-title a {
 	text-decoration: none;
-	color: #000000;
+	color: #000;
 }
 
 .post-list-article-title a:hover {
@@ -73,6 +73,7 @@ article.post-list-article + nav.pagination {
 
 .post-list-article-datetime {
 	font-size: 12px;
+	color: #666;
 }
 
 .post-list-article-tags {
@@ -91,7 +92,7 @@ article.article {
 
 .article-title a {
 	text-decoration: none;
-	color: #000000;
+	color: #000;
 }
 
 .article-title a:hover {
@@ -100,6 +101,7 @@ article.article {
 
 .article-datetime {
 	font-size: 12px;
+	color: #666;
 }
 
 .article-tags {
@@ -107,7 +109,7 @@ article.article {
 }
 
 article.article + .article-nav-adjacent {
-	border-top: 1px dashed #CCC;
+	border-top: 1px dashed #AAA;
     padding-top: 16px;
     padding-bottom: 16px;
 }
@@ -131,6 +133,9 @@ nav.pagination {
 .sidebar-content h2{
 	margin-top: 0px;
 	margin-bottom: 0px;
+	padding: 2px 8px;
+	border-bottom: 1px dashed #AAA;
+	border-left: 10px solid #AAA;
 }
 
 body { 
@@ -140,12 +145,13 @@ body {
 
 header {
 	padding: 16px;
-	background: #CCC;
+	background: #AAA;
 }
 
 .head-nav {
 	padding: 4px 16px;
 	background: #DDD;
+	border-bottom: 1px solid #AAA
 }
 
 nav ul {
