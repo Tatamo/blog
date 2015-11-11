@@ -85,7 +85,7 @@ article.post-list-article + nav.pagination {
 }
 
 .post-list-article-categories + .post-list-article-tags {
-	margin-top: -16px;
+	margin-top: -1em;
 }
 
 article.article {
@@ -121,7 +121,7 @@ article.article {
 }
 
 .article-categories + .article-tags {
-	margin-top: -16px;
+	margin-top: -1em;
 }
 
 article.article + .article-nav-adjacent {
