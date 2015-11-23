@@ -2,6 +2,7 @@ baseurl = "http://tatamo.github.io/blog/public/"
 languageCode = "ja"
 title = "わたしろぐ"
 canonifyurls = true
+rssuri = "rss.xml"
 
 [params]
 author = "Tatamo"
