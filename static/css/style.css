@@ -146,12 +146,21 @@ nav.pagination {
 	background-color: #DDD;
 }
 
-.sidebar-content h2{
+.sidebar-content h2.panel-title {
 	margin-top: 0px;
 	margin-bottom: 0px;
 	padding: 2px 8px;
 	border-bottom: 1px dashed #AAA;
 	border-left: 10px solid #AAA;
+}
+
+.sidebar-content h2.panel-title a {
+	text-decoration: none;
+	color: #000;
+}
+
+.sidebar-content h2.panel-title a:hover {
+	text-decoration: underline;
 }
 
 body { 

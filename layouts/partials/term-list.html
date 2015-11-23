@@ -1,0 +1,5 @@
+        <article class="term-list-article">
+            <ul>
+            {{ $plural := .Data.Plural }}{{ range $name, $value := .Data.Terms }}<li><a href="/{{ $plural }}/{{ $name | urlize }}">{{ $name }} ({{ .Count }})</a></li>
+            {{ end }}</ul>
+        </article>
