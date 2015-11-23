@@ -6,76 +6,16 @@
     <description>Recent content on わたしろぐ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 05 Nov 2015 21:54:09 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2015 17:46:04 +0900</lastBuildDate>
     <atom:link href="http://tatamo.github.io/blog/public/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Title</title>
-      <link>http://tatamo.github.io/blog/public/post/5th/</link>
-      <pubDate>Thu, 05 Nov 2015 21:54:09 +0900</pubDate>
+      <title>ブログはじめました</title>
+      <link>http://tatamo.github.io/blog/public/post/2015/11/23/hello-world/</link>
+      <pubDate>Mon, 23 Nov 2015 17:46:04 +0900</pubDate>
       
-      <guid>http://tatamo.github.io/blog/public/post/5th/</guid>
-      <description>
-
-&lt;h2 id=&#34;the-5th-article:5b0eb8414aaeb963f69b61ff525afbb8&#34;&gt;The 5th Article&lt;/h2&gt;
-
-&lt;p&gt;this article is posted at 2015-11-05 21:54.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>4th</title>
-      <link>http://tatamo.github.io/blog/public/post/4th/</link>
-      <pubDate>Mon, 02 Nov 2015 12:00:00 +0900</pubDate>
-      
-      <guid>http://tatamo.github.io/blog/public/post/4th/</guid>
-      <description>
-
-&lt;h2 id=&#34;the-4th-article:7d13fd7089ca8aa8d91f200882e1d040&#34;&gt;The 4th Article&lt;/h2&gt;
-
-&lt;p&gt;this is the 4th article.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>3rd</title>
-      <link>http://tatamo.github.io/blog/public/post/third/</link>
-      <pubDate>Fri, 30 Oct 2015 00:03:09 +0900</pubDate>
-      
-      <guid>http://tatamo.github.io/blog/public/post/third/</guid>
-      <description>
-
-&lt;h2 id=&#34;the-third-article:1fe12548244a1733e38ed5b40fa959e0&#34;&gt;The Third Article&lt;/h2&gt;
-
-&lt;p&gt;this is the third article.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>2nd</title>
-      <link>http://tatamo.github.io/blog/public/post/2015-10-28_secod/</link>
-      <pubDate>Wed, 28 Oct 2015 23:13:42 +0900</pubDate>
-      
-      <guid>http://tatamo.github.io/blog/public/post/2015-10-28_secod/</guid>
-      <description>&lt;p&gt;blah blah
-blah blah
-blah blah blah blah&amp;hellip;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>1st</title>
-      <link>http://tatamo.github.io/blog/public/post/2015-10-28_first/</link>
-      <pubDate>Wed, 28 Oct 2015 21:50:56 +0900</pubDate>
-      
-      <guid>http://tatamo.github.io/blog/public/post/2015-10-28_first/</guid>
-      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
-
-&lt;p&gt;Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
-
-&lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.&lt;/p&gt;
-
-&lt;p&gt;Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+      <guid>http://tatamo.github.io/blog/public/post/2015/11/23/hello-world/</guid>
+      <description>&lt;p&gt;ブログはじめました。&lt;/p&gt;
 </description>
     </item>
     
@@ -87,9 +27,17 @@ blah blah blah blah&amp;hellip;&lt;/p&gt;
       <guid>http://tatamo.github.io/blog/public/about/</guid>
       <description>
 
+&lt;p&gt;黒歴史は塗り替えてなんぼデスッ！！&lt;/p&gt;
+
+&lt;h2 id=&#34;about-this-blog:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;about this blog&lt;/h2&gt;
+
+&lt;p&gt;日記や技術的なことなど、まとまった文章を書くために使用する予定です。&lt;/p&gt;
+
 &lt;h2 id=&#34;about-me:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;about me&lt;/h2&gt;
 
-&lt;p&gt;黒歴史は塗り替えてなんぼデスッ！！&lt;/p&gt;
+&lt;p&gt;プログラミングやゲームをします。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/__tatamo__&#34;&gt;twitter&lt;/a&gt;やってます&lt;/p&gt;
 </description>
     </item>
     
