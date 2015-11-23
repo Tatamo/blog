@@ -6,8 +6,18 @@
     <description>Recent content in Freeciv on わたしろぐ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 23 Nov 2015 18:09:27 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2015 18:31:26 +0900</lastBuildDate>
     <atom:link href="http://tatamo.github.io/blog/public/categories/freeciv/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>freeciv test</title>
+      <link>http://tatamo.github.io/blog/public/post/2015/11/23/freeciv-test1/</link>
+      <pubDate>Mon, 23 Nov 2015 18:31:26 +0900</pubDate>
+      
+      <guid>http://tatamo.github.io/blog/public/post/2015/11/23/freeciv-test1/</guid>
+      <description>&lt;p&gt;外部読み込みをテストするための記事です。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>うくらいなにっき1010-2015</title>
