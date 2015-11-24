@@ -11,3 +11,4 @@ deploy:
         token: $GIT_TOKEN
         domain: tatamo.github.io
         basedir: public
+        repo: tatamo/blog-public
