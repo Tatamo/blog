@@ -2,9 +2,9 @@
     <article class="article">
         <h1 class="article-title"><a href="{{.Permalink}}">{{ .Title }}</a></h1>
         <span class="article-datetime"><time>{{ .Date.Format "2006-01-02 15:04:05" }}</time></span>
-        {{ with .Params.categories }}<p class="article-categories">Categories:{{ range . }}
+        {{ with .Params.categories }}<p class="article-categories">Category:{{ range . }}
         <a href="/categories/{{ . | urlize}}/">{{ . }}</a>{{ end }}</p>{{ end }}
-        {{ with .Params.tags }}<p class="article-tags">Tags:{{ range . }}
+        {{ with .Params.tags }}<p class="article-tags">Tag:{{ range . }}
         <a href="/tags/{{ . | urlize}}/">{{ . }}</a>{{ end }}</p>{{ end }}
         {{ .Content }}
     </article>

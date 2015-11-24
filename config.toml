@@ -5,6 +5,7 @@ canonifyurls = true
 
 [params]
 author = "Tatamo"
+subtitle = "私録"
 description = "Tatamo's weblog"
 twitter_url = "https://twitter.com/__tatamo__"
 github_url = "https://github.com/tatamo"
