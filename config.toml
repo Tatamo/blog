@@ -1,4 +1,4 @@
-baseurl = "http://tatamo.github.io/blog/public/"
+baseurl = "http://tatamo.github.io/blog-public/"
 languageCode = "ja"
 title = "わたしろぐ"
 canonifyurls = true
