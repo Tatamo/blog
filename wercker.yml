@@ -5,28 +5,33 @@ build:
         version: "0.14"
 deploy:
   steps:
+   - install-packages:
+       packages: git ssh-client
+   - lukevivier/gh-pages@0.2.1:
+       token: $GIT_TOKEN
+       domain: tatamo.github.io
+       basedir: public
+       repo: tatamo/blog-public
 #   - install-packages:
-#       packages: git ssh-client
-#   - lukevivier/gh-pages@0.2.1:
-#       token: $GIT_TOKEN
-#       domain: tatamo.github.io
-#       basedir: public
-#       repo: tatamo/blog-public
-    - install-packages:
-        packages: lftp
-    - script:
-        name: mirror over lftp
-        code: |
-            echo $DEPLOY_FTP_SERVER
-            mkdir -p $HOME/.lftp
-            echo "set ssl:verify-certificate no" > $HOME/.lftp/rc
-            lftp -u $DEPLOY_FTP_USER,$DEPLOY_FTP_PASS $DEPLOY_FTP_SERVER << EOF
-            set ftp:ssl-allow off
-            set net:timeout 5
-            set net:max-retries 3
-            set net:reconnect-interval-max 60
-            cd blog
-            ls
-            mirror -enR public /blog
-            EOF
-#           lftp -u $DEPLOY_FTP_USER,$DEPLOY_FTP_PASS -e "set ftp:ssl-allow off;set net:timeout 5;set net:max-retries 3;set net:reconnect-interval-max 60;mirror -enR public /blog;quit" $DEPLOY_FTP_SERVER
+#       packages: lftp
+#   - script:
+#      name: mirror over lftp
+#      code: |
+#          echo $DEPLOY_FTP_SERVER
+#          mkdir -p $HOME/.lftp
+#          echo "set ssl:verify-certificate no" > $HOME/.lftp/rc
+#          USER=$DEPLOY_FTP_USER
+#          PASS=$DEPLOY_FTP_PASS
+#          HOST=$DEPLOY_FTP_SERVER
+#          lftp -f "open $HOST
+#          user $USER $PASS
+#          pwd
+#          set net:timeout 5
+#          set net:max-retries 3
+#          set net:reconnect-interval-max 60
+#          set ftp:passive-mode off
+#          set ftp:ssl-allow off
+#          mirror --continue --reverse --delete --verbose=3 public /blog
+#          quit
+#          "
+#          lftp -u $USER,$PASS -e "debug;set ftp:passive-mode off;set ftp:ssl-allow off;set net:timeout 5;set net:max-retries 2;set net:reconnect-interval-max 30;ls;mirror --continue --reverse --delete --verbose=3 public /blog;quit" $HOST
