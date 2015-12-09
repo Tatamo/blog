@@ -20,4 +20,4 @@ deploy:
             echo $DEPLOY_FTP_SERVER
             mkdir -p $HOME/.lftp
             echo "set ssl:verify-certificate no" > $HOME/.lftp/rc
-            lftp -u $DEPLOY_FTP_USER,$DEPLOY_FTP_PASS -e "set ftp:ssl-allow off;set ftp:passive-mode off;set net:timeout 5;set net:max-retries 3;set net:reconnect-interval-max 60;mirror -enR public /blog;quit" $DEPLOY_FTP_SERVER
+            lftp -u $DEPLOY_FTP_USER,$DEPLOY_FTP_PASS -e "set ftp:ssl-allow off;set net:timeout 5;set net:max-retries 3;set net:reconnect-interval-max 60;mirror -enR public /blog;quit" $DEPLOY_FTP_SERVER
