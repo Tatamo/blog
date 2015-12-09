@@ -10,7 +10,7 @@ deploy:
     - leipert/git-push:
         gh-oauth: $GIT_TOKEN
         basedir: public
-        repo: tatamo/blog_public
+        repo: tatamo/blog-public
 #   - install-packages:
 #       packages: lftp
 #   - script:
