@@ -13,6 +13,10 @@ deploy:
 #       basedir: public
 #       repo: tatamo/blog-public
     - script:
+        name: install lftp
+        cpde: |
+            sudo apt-get install -y lftp
+    - script:
         name: mirror over lftp
         code: |
             lftp -u ${DEPLOY_FTP_USER},${DEPLOY_FTP_PASS} -e "set ftp:passive-mode off; set net:timeout 5; cd /blog; lcd /public; mirror -enR; quit" ${DEPLOY_FTP_SERVER}
