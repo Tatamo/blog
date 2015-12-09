@@ -17,4 +17,4 @@ deploy:
     - script:
         name: mirror over lftp
         code: |
-            lftp -u ${DEPLOY_FTP_USER},${DEPLOY_FTP_PASS} -e "set ftp:allow-ssl off;set ftp:passive-mode off;set net:timeout 5;cd /blog;lcd public;mirror -enR;quit" ${DEPLOY_FTP_SERVER}
+            lftp -u ${DEPLOY_FTP_USER},${DEPLOY_FTP_PASS} -e "set ftp:allow-ssl off;set ftp:passive-mode off;set net:timeout 5;set net:max-retries 8;cd /blog;lcd public;mirror -enR;quit" ${DEPLOY_FTP_SERVER}
