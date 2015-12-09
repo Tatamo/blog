@@ -7,8 +7,12 @@ deploy:
   steps:
     - install-packages:
         packages: git ssh-client
-    - lukevivier/gh-pages@0.2.1:
-        token: $GIT_TOKEN
-        domain: tatamo.github.io
-        basedir: public
-        repo: tatamo/blog-public
+#   - lukevivier/gh-pages@0.2.1:
+#       token: $GIT_TOKEN
+#       domain: tatamo.github.io
+#       basedir: public
+#       repo: tatamo/blog-public
+    - script:
+        name: mirror over lftp
+        code: |
+            lftp -u ${DEPLOY_FTP_USER},${DEPLOY_FTP_PASS} -e "set ftp:passive-mode off; set net:timeout 5; cd /blog; lcd /public; mirror -enR; quit" ${DEPLOY_FTP_SERVER}
