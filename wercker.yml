@@ -5,18 +5,17 @@ build:
         version: "0.14"
 deploy:
   steps:
-   - install-packages:
-       packages: git ssh-client
-   - lukevivier/gh-pages@0.2.1:
-       token: $GIT_TOKEN
-       domain: tatamo.github.io
-       basedir: public
-       repo: tatamo/blog-public
+    - install-packages:
+        packages: git ssh-client
+    - leipert/git-push@0.7.6
+        gh-oauth: $GIT_TOKEN
+        basedir: public
+        repo: tatamo/blog_public
 #   - install-packages:
 #       packages: lftp
 #   - script:
-#      name: mirror over lftp
-#      code: |
+#       name: mirror over lftp
+#       code: |
 #          echo $DEPLOY_FTP_SERVER
 #          mkdir -p $HOME/.lftp
 #          echo "set ssl:verify-certificate no" > $HOME/.lftp/rc
