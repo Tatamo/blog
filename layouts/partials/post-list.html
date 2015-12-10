@@ -10,5 +10,8 @@
                 <p>
                     {{ .Summary }}
                 </p>
-            </div>
-        </article>{{ end }}
+            </div>{{ if .Truncated }}
+            <div class="read-more-link">
+                <a href="{{ .RelPermalink }}">Read More...</a>
+            </div>{{ end }}
+        </arcitle>{{ end }}

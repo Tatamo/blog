@@ -96,6 +96,7 @@ article.post-list-article + nav.pagination {
 
 article.article {
 	padding-top: 10px;
+	margin-right: 4%;
 }
 
 .article-title {
