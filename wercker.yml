@@ -11,6 +11,7 @@ deploy:
         gh-oauth: $GIT_TOKEN
         basedir: public
         repo: tatamo/blog-public
+        clean_removed_files: true
 #   - install-packages:
 #       packages: lftp
 #   - script:
