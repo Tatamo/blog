@@ -1,6 +1,6 @@
 +++
 categories = ["info"]
-date = "2015-11-23T17:46:04+09:00"
+date = "2015-12-11T00:00:00+09:00"
 draft = false
 slug = ""
 tags = ["info"]
