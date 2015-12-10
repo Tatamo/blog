@@ -3,6 +3,8 @@ languageCode = "ja"
 title = "わたしろぐ"
 canonifyurls = true
 
+[permalinks]
+post = "/:year/:month/:day/:filename/"
 [params]
 author = "Tatamo"
 subtitle = "私録"
