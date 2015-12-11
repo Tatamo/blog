@@ -3,7 +3,7 @@ categories = ["tech"]
 date = "2015-12-12T01:01:51+09:00"
 draft = false
 slug = ""
-tags = ["highlight_js", "blog"]
+tags = ["highlight_js", "javascript", "blog"]
 title = "highlight.jsをインライン要素にも適用できるようにした"
 
 +++
@@ -58,7 +58,7 @@ window.addEventListener("DOMContentLoaded", function(){
 }, false);
 </script>
 ```
-普通`hljs.initHighlightingOnLoad();`を呼ぶところを、上記のコードで置き換えるだけで完了です。
+通常`hljs.initHighlightingOnLoad();`を呼ぶところを、上記のコードで置き換えるだけで完了です。
 親要素が`<pre>`ではない場合にインライン化するようにしています。
 またスタイルの指定も同時に行っているので、別途CSSを記述する必要はありません。
 
