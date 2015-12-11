@@ -2,7 +2,7 @@
 categories = ["info"]
 date = "2015-12-11T00:00:00+09:00"
 draft = false
-tags = ["info"]
+tags = ["info","blog"]
 title = "ブログはじめました"
 
 +++
