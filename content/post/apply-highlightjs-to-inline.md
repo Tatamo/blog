@@ -47,12 +47,12 @@ window.addEventListener("DOMContentLoaded", function(){
 	var elements = document.getElementsByTagName("code");
 	var l=elements.length;
 	for(var i=0; i<l;i++){
-	var el = elements[i];
-	hljs.highlightBlock(el);
-	if(el.parentNode.tagName.toLowerCase() != "pre") {
-		el.style.display = "inline";
-		el.style.margin = "0 2px";
-		el.style.padding = "1px 3px";
+		var el = elements[i];
+		hljs.highlightBlock(el);
+		if(el.parentNode.tagName.toLowerCase() != "pre") {
+			el.style.display = "inline";
+			el.style.margin = "0 2px";
+			el.style.padding = "1px 3px";
 		}
 	}
 }, false);
