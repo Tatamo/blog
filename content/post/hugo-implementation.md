@@ -38,8 +38,9 @@ hugo new site name_of_my_site
 ```
 を実行することで、サイト用のディレクトリが生成されます。
 中には、config.tomlといくつかのディレクトリが生成されているはずです。
+config.tomlはサイト全体の設定を記述するファイルです。
 
-このうち、contentディレクトリは記事ファイルを配置する場所です。
+contentディレクトリは、記事ファイルを配置する場所です。
 ```bash
 hugo new hoge.md
 ```
