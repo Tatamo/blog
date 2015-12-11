@@ -226,5 +226,6 @@ footer {
 
 aside.sidebar {
 	min-width: 220px;
+	max-width: 30%;
 }
 
