@@ -7,6 +7,8 @@
         {{ with .Params.tags }}<p class="article-tags">Tag:{{ range . }}
         <a href="/tags/{{ . | urlize}}/">{{ . }}</a>{{ end }}</p>{{ end }}
         {{ .Content }}
+        <p><a href="https://twitter.com/share" class="twitter-share-button"{count} data-via="__tatamo__">Tweet</a></p>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
     </article>
     {{ if or .PrevInSection .NextInSection }}<nav class="article-nav-adjacent">{{ if .NextInSection }}
         <span class="article-link-next"><a href="{{ .NextInSection.Permalink }}">&lt;- Newer: {{ .NextInSection.Title }}</a></span>{{ end }}
