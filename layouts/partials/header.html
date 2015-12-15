@@ -8,7 +8,7 @@
     <title>{{ if eq .Title .Site.Title }}
       {{ .Title }}
     {{ else }}
-      {{ .Title }} - {{ .Site.Title }}
+      {{ .Title }} | {{ .Site.Title }}
     {{ end }}</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
     <link rel="canonical" href="{{ .Permalink }}">{{ if .RSSlink }}
