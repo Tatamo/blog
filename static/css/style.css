@@ -3,7 +3,12 @@ a:link { color: #00F; }
 a:visited { color: #00F; }
 
 p {
-	line-height:1.5;
+	line-height: 1.5;
+}
+
+hr {
+	border: 0;
+	border-top: 1px dashed #DDD;
 }
 
 header .site-title {
