@@ -65,3 +65,4 @@ window.addEventListener("DOMContentLoaded", function(){
 既に記事内で何回も使用しているので今更感はありますが、実際にインラインのコードがハイライトされるか見てみましょう。
 たとえば、このように:`print "\n".join(["Fizz"*(not i%3)+"Buzz"*(not i%5) or str(i) for i in range(1,101)])`1行のコードでもうまくハイライトされているのがわかります。
 やったね。
+
