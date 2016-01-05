@@ -7,6 +7,8 @@ p {
 }
 
 hr {
+	width: 95%;
+	margin-left: 1%;
 	border: 0;
 	border-top: 1px dashed #DDD;
 }
@@ -20,7 +22,7 @@ header .site-title {
 header .site-title a {
 	text-decoration: none;
 	color: #000;
-}C:\Hugo\blog\static\css\style.css
+}
 
 header .site-title a:hover {
 	text-decoration: underline;

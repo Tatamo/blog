@@ -2,10 +2,10 @@
         <article class="post-list-article">
             <h2 class="post-list-article-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
             <span class="post-list-article-datetime"><time>{{ .Date.Format "2006-01-02 15:04:05" }}</time></span>
-        {{ with .Params.categories }}<p class="post-list-article-categories">Category:{{ range . }}
-        <a href="/categories/{{ . | urlize}}/">{{ . }}</a>{{ end }}</p>{{ end }}
-        {{ with .Params.tags }}<p class="post-list-article-tags">Tag:{{ range . }}
-        <a href="/tags/{{ . | urlize}}/">{{ . }}</a>{{ end }}</p>{{ end }}
+            {{ with .Params.categories }}<p class="post-list-article-categories">Category:{{ range . }}
+            <a href="/categories/{{ . | urlize}}/">{{ . }}</a>{{ end }}</p>{{ end }}
+            {{ with .Params.tags }}<p class="post-list-article-tags">Tag:{{ range . }}
+            <a href="/tags/{{ . | urlize}}/">{{ . }}</a>{{ end }}</p>{{ end }}
             <div class="post-content">
                 <p>
                     {{ .Summary }}
@@ -14,4 +14,4 @@
             <div class="read-more-link">
                 <a href="{{ .RelPermalink }}">Read More...</a>
             </div>{{ end }}
-        </arcitle>{{ end }}
+        </article>{{ end }}
