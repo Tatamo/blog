@@ -1,3 +1,7 @@
+/* スクロールバー表示設定 */
+html {
+	overflow-y: scroll;
+}
 
 a:link { color: #00F; }
 a:visited { color: #00F; }
@@ -223,12 +227,16 @@ footer {
 
 /* layout */
 .container{
+	display: -webkit-flex;
 	display: flex;
+	min-width:940px;
 }
 
 .main-content{
+	-webkit-flex: 1;
 	flex: 1;
 	margin: 0px 8px 0px 0px;
+	min-width:700px;
 }
 
 aside.sidebar {
