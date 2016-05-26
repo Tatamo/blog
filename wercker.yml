@@ -7,6 +7,10 @@ deploy:
   steps:
 #    - install-packages:
 #        packages: git ssh-client
+    - script:
+        name: install git
+        code: |
+          apt-get update && apt-get install git -y
     - lordlothar99/git-push@0.7.18:
         gh-oauth: $GIT_TOKEN
         basedir: public
