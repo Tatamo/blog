@@ -17,4 +17,5 @@ title = "About"
 
 [twitter](https://twitter.com/__tatamo__)やってます
 
+これまで作ったものなどはこちらにまとめています: [Tatamo's works](http://tatamo.81.la/)
 
