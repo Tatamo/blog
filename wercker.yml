@@ -7,7 +7,7 @@ deploy:
   steps:
 #    - install-packages:
 #        packages: git ssh-client
-    - krlmlr/git-push@0.7.12:
+    - lordlothar99/git-push@0.7.18:
         gh-oauth: $GIT_TOKEN
         basedir: public
         repo: tatamo/blog-public
