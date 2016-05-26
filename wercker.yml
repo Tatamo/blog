@@ -5,8 +5,8 @@ build:
         version: "0.14"
 deploy:
   steps:
-    - install-packages:
-        packages: git ssh-client
+#    - install-packages:
+#        packages: git ssh-client
     - krlmlr/git-push@0.7.12:
         gh-oauth: $GIT_TOKEN
         basedir: public
