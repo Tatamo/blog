@@ -14,7 +14,7 @@ deploy:
     - lordlothar99/git-push@0.7.18:
         gh-oauth: $GIT_TOKEN
         basedir: public
-        repo: tatamo/blog-public
+        repo: $REPO_TO_DEPLOY
         clean_removed_files: true
 #   - install-packages:
 #       packages: lftp
