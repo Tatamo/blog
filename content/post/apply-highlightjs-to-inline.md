@@ -1,5 +1,5 @@
 +++
-categories = ["tech"]
+categories = ["dev"]
 date = "2015-12-12T01:01:51+09:00"
 draft = false
 slug = ""
