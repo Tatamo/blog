@@ -5,13 +5,9 @@ build:
         version: "0.14"
 deploy:
   steps:
-#    - install-packages:
-#        packages: git ssh-client
-    - script:
-        name: install git
-        code: |
-          apt-get update && apt-get install git -y
-    - lordlothar99/git-push@0.7.18:
+    - install-packages:
+        packages: git
+    - leipert/git-push:
         gh-oauth: $GIT_TOKEN
         basedir: public
         repo: $REPO_TO_DEPLOY
