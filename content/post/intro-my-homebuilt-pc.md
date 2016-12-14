@@ -3,7 +3,7 @@ categories = ["pc"]
 date = "2016-12-07T13:53:12+09:00"
 draft = false
 slug = ""
-tags = ["homebuilt_pc", ""]
+tags = ["homebuilt_pc"]
 title = "自作PCの紹介"
 
 +++
