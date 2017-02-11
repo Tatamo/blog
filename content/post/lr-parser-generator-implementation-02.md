@@ -1,6 +1,6 @@
 +++
-categories = [""]
-date = "2017-02-11T15:13:48+09:00"
+categories = ["dev"]
+date = "2017-02-11T18:13:48+09:00"
 draft = false
 slug = ""
 tags = ["parsing", "parser generator", "parser", "lexer"]
