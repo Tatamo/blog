@@ -66,7 +66,7 @@ export type LexDefinitions = Array<LexDefinitionSection>;
 
 // 実際の字句規則
 const lex: LexDefinitions = [
-	{token:"NUMBER", pattern:/[1-9][0-9]*/},
+	{token:"DIGITS", pattern:/[1-9][0-9]*/},
 	{token:"PLUS", pattern:"+"},
 	{token:"ASTERISK", pattern:"*"},
 	{token:"LPAREN", pattern:"("},
@@ -215,14 +215,14 @@ execメソッドでは入力を読み終えるまでマッチングを繰り返�
 この字句解析器に先ほどの字句規則を与え、`9 + 11 * (2 + 1)` を入力すると、
 ```TypeScript
 [
-	{token:"NUMBER", value:"9"},
+	{token:"DIGITS", value:"9"},
 	{token:"PLUS", value:"+"},
-	{token:"NUMBER", value:"11"},
+	{token:"DIGITS", value:"11"},
 	{token:"ASTERISK", value:"*"},
 	{token:"LPAREN", value:"("},
-	{token:"NUMBER", value:"2"},
+	{token:"DIGITS", value:"2"},
 	{token:"PLUS", value:"+"},
-	{token:"NUMBER", value:"1"},
+	{token:"DIGITS", value:"1"},
 	{token:"RPAREN", value:")"},
 	{token:Symbol(EOF), value:""}
 ]
@@ -231,4 +231,5 @@ execメソッドでは入力を読み終えるまでマッチングを繰り返�
 これでトークンの並びを得ることに成功したので、次回以降はいよいよパーサジェネレータの作成に移っていくことになります。
 
 
-[前回:かんたん構文解析入門](/2016/12/22/lr-parser-generator-implementation/)
+[前回:かんたん構文解析入門](/2016/12/22/lr-parser-generator-implementation/)  
+[次回:儀式の下準備](/2017/03/21/lr-parser-generator-implementation-03/)
