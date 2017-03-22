@@ -305,4 +305,5 @@ getメソッドではトークンを引数にとるだけでなく、トーク�
 
 
 [第1回:かんたん構文解析入門](/2016/12/22/lr-parser-generator-implementation/)  
-[前回:字句解析器の実装](/2017/02/11/lr-parser-generator-implementation-02/)
+[前回:字句解析器の実装](/2017/02/11/lr-parser-generator-implementation-02/)  
+[次回:かんたんLR(1)法入門](/2017/03/22/lr-parser-generator-implementation-04/)
