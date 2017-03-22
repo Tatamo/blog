@@ -267,7 +267,8 @@ Aが終端記号であるなら、`First(A)`は`{A}`(A自身のみを要素と�
 * ルール `X -> Y1 Y2 ... Yi` について、以下の制約を生成する。
 	* `First(X) ⊇ First(Y1)`
 	* `Y1`がNullableなら `First(X) ⊇ First(Y2)`
-	* `Y2`がNullableなら `First(X) ⊇ First(Y3)`
+	* `Y1`および`Y2`がともにNullableなら `First(X) ⊇ First(Y3)`
+	* `Y1`および`Y2`および`Y3`がともにNullableなら `First(X) ⊇ First(Y4)`
 	* 以下繰り返し
 * 生成した制約に従い、スーパーセット側にサブセット側の集合の持つ記号を追加していく(制約の解消)。
 * 制約の解消を全ての集合に変化がなくなるまで繰り返す。
