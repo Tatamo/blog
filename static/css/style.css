@@ -42,11 +42,6 @@ header .site-subtitle {
 	padding: 16px;
 }
 
-.main-content {
-	float: left;
-	width: 620px;
-}
-
 .tag-list-title {
 	font-size: 36px;
 	padding-bottom: 8px;
@@ -226,21 +221,30 @@ footer {
 }
 
 /* layout */
-.container{
-	display: -webkit-flex;
-	display: flex;
-	min-width:940px;
+/* desktop */
+@media only screen and (min-width: 1025px){
+	.container{
+		display: -webkit-flex;
+		display: flex;
+		min-width:940px;
+	}
+
+	.main-content{
+		/*width: 620px;*/
+		-webkit-flex: 1;
+		flex: 1;
+		margin: 0px 8px 0px 0px;
+		min-width:700px;
+	}
+
+	aside.sidebar {
+		min-width: 220px;
+		max-width: 30%;
+	}
 }
 
-.main-content{
-	-webkit-flex: 1;
-	flex: 1;
-	margin: 0px 8px 0px 0px;
-	min-width:700px;
+/* mobile */
+@media only screen and (max-width: 1024px){
 }
 
-aside.sidebar {
-	min-width: 220px;
-	max-width: 30%;
-}
 
