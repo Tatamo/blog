@@ -19,7 +19,7 @@ hr {
 
 header .site-title {
 	text-shadow: -1px 1px 0 rgba(0,0,0,0.1);
-	font-size: 42px;
+	font-size: 2.75em;
 	margin-bottom: 0px;
 }
 
@@ -34,7 +34,7 @@ header .site-title a:hover {
 
 header .site-subtitle {
 	margin-top: 0px;
-	font-size: 20px;
+	font-size: 1.25em;
 	color:#000;
 }
 
@@ -43,7 +43,7 @@ header .site-subtitle {
 }
 
 .tag-list-title {
-	font-size: 36px;
+	font-size: 2.25em;
 	padding-bottom: 8px;
 	margin-top: 0px;
 	margin-bottom: 0px;
@@ -75,7 +75,7 @@ article.post-list-article + nav.pagination {
 .post-list-article-title {
 	margin-top: 0px;
 	margin-bottom: 0px;
-	font-size: 32px;
+	font-size: 2em;
 }
 
 .post-list-article-title a {
@@ -88,7 +88,7 @@ article.post-list-article + nav.pagination {
 }
 
 .post-list-article-datetime {
-	font-size: 12px;
+	font-size: 0.75em;
 	color: #666;
 }
 
@@ -112,7 +112,7 @@ article.article {
 .article-title {
 	margin-top: 0px;
 	margin-bottom: 0px;
-	font-size: 32px;
+	font-size: 2em;
 }
 
 .article-title a {
@@ -125,7 +125,7 @@ article.article {
 }
 
 .article-datetime {
-	font-size: 12px;
+	font-size: 0.75em;
 	color: #666;
 }
 
@@ -245,6 +245,9 @@ footer {
 
 /* mobile */
 @media only screen and (max-width: 1024px){
+	html{
+		font-size: 80%;
+	}
 }
 
 
