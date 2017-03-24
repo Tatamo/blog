@@ -249,6 +249,7 @@ footer {
 		font-size: 90%;
 	}
 	body { 
+		word-wrap:break-word;
 		padding: 0;
 		width: 100%;
 	}
