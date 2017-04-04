@@ -310,12 +310,14 @@ export declare class ParserGenerator {
 }
 ```
 これも前回紹介したアルゴリズムの通り、DFAを読み取って適切な命令を配置していくだけです。
-ここまでで構文解析表の構築まで終了したので、パーサジェネレータはほぼ完成となります。
+ParserGeneratorクラスは、初期化時にSyntaxDBおよびDFAGeneratorのインスタンスを生成し、DFAGeneratorから得られたDFAをもとに構文解析表の生成を行います。
 
+ここまでで構文解析表の構築まで終了したので、パーサジェネレータはほぼ完成となります。
 あとは、この構文解析表を読み取ることのできるパーサの実装が必要です。
 次回はパーサの実装を行いますが、そのパーサの動作等についても前回の記事である程度解説しているため、やはり実装中心となります。
 
 
 [第1回:かんたん構文解析入門](/2016/12/22/lr-parser-generator-implementation/)  
-[前回:かんたんLR(1)法入門](/2017/03/22/lr-parser-generator-implementation-04/)
+[前回:かんたんLR(1)法入門](/2017/03/22/lr-parser-generator-implementation-04/)  
+[次回:パーサの実装と構文解析の実行](/2017/04/04/lr-parser-generator-implementation-06/)
 
