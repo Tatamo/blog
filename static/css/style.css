@@ -6,6 +6,10 @@ html {
 a:link { color: #00F; }
 a:visited { color: #00F; }
 
+img {
+	max-width: 90%;
+}
+
 p {
 	line-height: 1.5;
 }
