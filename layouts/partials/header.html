@@ -17,16 +17,25 @@
     <script src="highlight/highlight.pack.js"></script>
     <script>
     // hljs.initHighlightingOnLoad();
-    window.addEventListener("DOMContentLoaded", function(){
-        var elements = document.getElementsByTagName("code");
-        var l=elements.length;
-        for(var i=0; i<l;i++){
-            var el = elements[i];
-            hljs.highlightBlock(el);
-            if(el.parentNode.tagName.toLowerCase() != "pre") {
+    window.addEventListener("DOMContentLoaded", () => {
+        const elements = document.getElementsByTagName("code");
+        for (const el of elements) {
+            if (el.parentNode.tagName != "PRE") {
+                // インライン要素
                 el.style.display = "inline";
                 el.style.margin = "0 2px";
                 el.style.padding = "1px 3px";
+                if (el.classList.length == 0) {
+                    // classが指定されていない場合はnohighlightとする
+                    el.classList.add("nohighlight");
+                }
+            }
+            hljs.highlightBlock(el);
+			// nohighlightでもテーマは適用する
+            if (el.classList.contains("nohighlight") ||
+                el.classList.contains("lang-nohighlight") ||
+                el.classList.contains("language-nohighlight")) {
+                el.classList.add("hljs");
             }
         }
     }, false);
