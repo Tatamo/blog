@@ -3,7 +3,7 @@ categories = ["dev"]
 date = "2015-12-12T01:01:51+09:00"
 draft = false
 slug = ""
-tags = ["highlight_js", "javascript", "blog"]
+tags = ["highlightjs", "javascript", "blog"]
 title = "highlight.jsをインライン要素にも適用できるようにした"
 
 +++
@@ -30,9 +30,9 @@ for i in range(1,101) :
 
 
 ## インライン要素でもハイライトできるようにしてみた
-通常では、highlight.jsによるハイライトは`<pre><code>`から`</code></pre>`で囲まれたブロック要素にのみ適用され、インライン要素に適用することはできません。1行の中にコードを埋め込みたいことも多いので、これではやや不便です。
+通常では、highlight.jsによるハイライトは<code class="html">&lt;pre&gt;&lt;code&gt;</code>から<code class="html">&lt;/code&gt;&lt;/pre&gt;</code>で囲まれたブロック要素にのみ適用され、インライン要素に適用することはできません。1行の中にコードを埋め込みたいことも多いので、これではやや不便です。
 
-Markdownの展開方法に適用できるように、`<code></code>`で囲まれた要素をハイライトすることにします。
+Markdownの展開方法に適用できるように、<code class="html">&lt;code&gt;&lt;/code&gt;</code>で囲まれた要素をハイライトすることにします。
 既に先人たちが記事を書いてくれているので、基本的にはそれを参考にするだけでした。
 
 * [highlight.jsでインラインのソースコードもハイライトする | blog@kenzauros.com](http://kenzauros.com/blog/apply-highlight-js-to-inline-source-code/)
@@ -59,7 +59,7 @@ window.addEventListener("DOMContentLoaded", function(){
 </script>
 ```
 通常`hljs.initHighlightingOnLoad();`を呼ぶところを、上記のコードで置き換えるだけで完了です。
-親要素が`<pre>`ではない場合にインライン化するようにしています。
+親要素が<code class="html">&lt;pre&gt;</code>ではない場合にインライン化するようにしています。
 またスタイルの指定も同時に行っているので、別途CSSを記述する必要はありません。
 
 既に記事内で何回も使用しているので今更感はありますが、実際にインラインのコードがハイライトされるか見てみましょう。
