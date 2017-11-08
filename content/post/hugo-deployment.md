@@ -24,7 +24,7 @@ Werckerを利用した自動デプロイは、[Hugoの公式ドキュメント](
 ### wercker.ymlの記述
 公式ドキュメントによる解説にも書いてありますが、Werckerによる自動ビルド/デプロイを利用するには、対象のGitHubリポジトリ内にwercker.ymlというファイルを作成し、そこに設定やビルド時の処理を記述する必要があります。
 既にHugoビルド用の設定を作ってくれている人がいるので、それを利用すれば簡単にビルドができます。
-``` yml
+```yml
 box: debian 
 build:
   steps:
@@ -36,7 +36,7 @@ build:
 
 ## WerckerとDeployBotを使って自動デプロイする
 前述のように、今回使用している環境ではWebサーバーにFTPでアップロードすることが目的のため、デプロイはwerckerからlftpを使用して行おうとしましたが、うまくいきませんでした。
-``` yml
+```yml
 box: debian 
 build:
   steps:
@@ -69,7 +69,7 @@ DeployBotによるデプロイは、[Hugoをセットアップしてデプロイ
 
 Werckerから別のGitHubリポジトリへのpushを行うようにするため、公式ドキュメントに書かれている通りにwercker.ymlを書き換えます。
 
-``` yml
+```yml
 box: debian 
 build:
   steps:
@@ -97,7 +97,7 @@ DeployBotはリポジトリが更新されるとその内容をそのままサ�
 ### GitHubリポジトリの分割
 Hugoのビルドをローカルでは行わないようにしたため、リポジトリ内に/publicを含める必要がありません。.gitignoreに次の行を記述します。
 
-```
+```nohighlight
 public/
 ```
 

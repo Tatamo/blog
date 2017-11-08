@@ -20,7 +20,7 @@ title = "LR(1)パーサジェネレータを自作して構文解析をする �
 ## ASTの定義
 パーサを実装する前に、パーサの出力結果となる抽象構文木の定義を行います。    
 https://github.com/Tatamo/parsergenerator/blob/master/src/parser/ast.ts
-```TypeScript
+```ts
 /// ast.ts
 export interface ASTNode{
 	type: Token;
@@ -32,7 +32,7 @@ export interface ASTNode{
 それぞれのノードにはそれが何の記号かを示すトークン、およびそのトークンに紐つけられている実際の入力文字列(そのトークンが非終端記号である場合はnull)、自身の子となるノードの配列を持ちます。
 
 たとえば、[第3回](/2017/03/21/lr-parser-generator-implementation-03/)で定義した構文規則によって`1+1`を解析した場合、結果として得られる抽象構文木は以下のようになるでしょう。
-```TypeScript
+```json
 {"type":"EXP", "value":null, "children":[
     {"type":"EXP", "value":null, "children":[
         {"type":"TERM", "value":null, "children":[
@@ -55,7 +55,7 @@ export interface ASTNode{
 ## パーサの実装
 ではParserクラスを作っていきます。    
 https://github.com/Tatamo/parsergenerator/blob/master/src/parser/parser.ts    
-```TypeScript
+```ts
 /// parser.ts
 export interface TerminalCallbackArg {
         token: string;
@@ -94,7 +94,7 @@ export declare class Parser {
 
 あとは、このParserをParserGeneratorから利用できるようにするため、適当にファクトリクラスを作ります。
 https://github.com/Tatamo/parsergenerator/blob/master/src/parser/factory.ts
-```TypeScript
+```ts
 /// factory.ts
 export class ParserFactory{
 	public static create(grammar: GrammarDefinition, parsing_table: ParsingTable, default_fallback?: ParserCallback):Parser{
@@ -105,7 +105,7 @@ export class ParserFactory{
 ```
 
 [ParserGenerator#getParser()メソッド](https://github.com/Tatamo/parsergenerator/blob/master/src/parsergenerator/parsergenerator.ts#L32)には、以下のような記述を行います。
-```TypeScript
+```ts
 /// parsergenerator.ts
 public getParser(default_callback?: ParserCallback):Parser{
 	return ParserFactory.create(this.grammar, this.parsing_table, default_callback);
@@ -118,7 +118,7 @@ public getParser(default_callback?: ParserCallback):Parser{
 ### 構文木を生成する
 では、実際に構文解析を実行してみましょう。
 与える構文は、以下のようになります。
-```TypeScript
+```ts
 const syntax:SyntaxDefinitions = [
 	{
 		ltoken: "EXP",
@@ -163,11 +163,11 @@ const grammar:GrammarDefinition = {
 };
 ```
 `9 + 11 * (2 + 1)`という式を解析するためには、以下のように実行します。
-```TypeScript
+```ts
 new ParserGenerator(grammar).getParser().parse("9 + 11 * (2 + 1)");
 ```
 すると、結果として以下のようなオブジェクトが得られます。
-```TypeScript
+```json
 {"type":"EXP","value":null,"children":[
     {"type":"EXP","value":null,"children":[
     {"type":"TERM","value":null,"children":[
@@ -216,7 +216,7 @@ new ParserGenerator(grammar).getParser().parse("9 + 11 * (2 + 1)");
 確かに一度構文木を生成してからそれを解析してもよいのですが、パーサに適当なコールバックを渡し、構文木を生成する代わりに数式処理を行ってしまうという手もあります。
 
 先ほどのparsergenerator.tsに、以下のような定義が含まれていました。
-```TypeScript
+```ts
 export interface TerminalCallbackArg {
         token: string;
         value: string;
@@ -235,7 +235,7 @@ Parserのコンストラクタ引数、ParserGeneratorのgetParserメソッド�
 処理するべきトークンが終端器号であった場合はそのトークンの種類と実際の入力が、非終端記号であった場合は対応する規則の情報、およびその子ノードの情報が引数として与えられます。
 
 実際に、数式の処理を行うための関数を書いてみましょう。
-```TypeScript
+```ts
 let solve_terminal = (arg:TerminalCallbackArg)=>{
 	switch(arg.token){
 		case "DIGITS":
@@ -263,11 +263,11 @@ let solve = (arg:ParserCallbackArg)=>{
 }
 ```
 これをもとに、以下のように実行します。
-```TypeScript
+```ts
 new ParserGenerator(grammar).getParser(solve).parse("9 + 11 * (2 + 1)");
 ```
 実行結果は、以下のようになります。
-```TypeScript
+```shell
 42
 ```
 

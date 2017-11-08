@@ -22,11 +22,11 @@ title = "LR(1)パーサジェネレータを自作して構文解析をする �
 [前回](/2016/12/22/lr-parser-generator-implementation/)の記事でも紹介しましたが、字句解析器の行う処理は以下のような流れになります。
 
 まず、解析するべき入力を文字列として受け取ります。
-```
+```nohighlight
 9 + 11 * (2 + 1)
 ```
 これに加えて、字句規則を用意します。
-```
+```nohighlight
 数字: /[1-9][0-9]*/
 プラス: "+"
 アステリスク: "*"
@@ -37,7 +37,7 @@ title = "LR(1)パーサジェネレータを自作して構文解析をする �
 ```
 字句解析器は受け取った入力を先頭から順に字句規則にあてはめ、マッチするものがあればそのトークンを割り当てます。
 結果として得られる出力は、以下のようなリストになります。
-```
+```nohighlight
 数字: 9
 プラス: +
 数字: 11
@@ -55,7 +55,7 @@ title = "LR(1)パーサジェネレータを自作して構文解析をする �
 そのため、予め字句規則を別の設定ファイルなどに書いておくなどして用意しておかなければなりません。
 ただし、**字句規則の解析には構文解析器が必要**となるため、現時点ではプログラム内にハードコーディングしておくなどする必要があります。
 今回は、字句規則を内部的に以下のようなデータ構造で扱うこととして、しばらくは字句規則をその内部データの形式で直接書くことにします。
-```TypeScript
+```ts
 // 定義
 export type Token = string|symbol;
 export interface LexDefinitionSection{
@@ -80,7 +80,7 @@ const lex: LexDefinitions = [
 Tokenの型定義にsymbolを含めている点についてはここで説明せずに後述することとします。
 
 ### 入力の読み捨て
-```TypeScript
+```ts
 {token:null, pattern:/\s/}
 // (読み捨て): /\s/
 ```
@@ -110,7 +110,7 @@ Tokenの型定義にsymbolを含めている点についてはここで説明せ
 コンストラクタ引数として字句規則データを受け取って保持しておくようにして、解析実行時に上から順に字句規則のマッチングを試みるだけです。
 
 今回はコード量が少ないので、 https://github.com/Tatamo/parsergenerator/blob/master/src/lexer.ts 全体をそのまま貼り付けます。
-```TypeScript
+```ts
 /// token.ts
 export type Token = string|symbol;
 export const SYMBOL_EOF:Token = Symbol("EOF");
@@ -120,7 +120,7 @@ export const SYMBOL_DOT:Token = Symbol(".");
 export type TokenList = Array<{token:Token, value:string}>;
 ```
 
-```TypeScript
+```ts
 /// lexer.ts
 /// LexDefinitionsの定義は先述のものと同一
 import {Token, SYMBOL_EOF, TokenList} from "./token";
@@ -213,7 +213,7 @@ execメソッドでは入力を読み終えるまでマッチングを繰り返�
 とはいえプログラミング言語個別の問題はこの記事の主題とは関係がないため、詳しくは言及しません。)
 
 この字句解析器に先ほどの字句規則を与え、`9 + 11 * (2 + 1)` を入力すると、
-```TypeScript
+```json
 [
 	{token:"DIGITS", value:"9"},
 	{token:"PLUS", value:"+"},

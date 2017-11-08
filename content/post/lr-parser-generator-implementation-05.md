@@ -26,7 +26,7 @@ title = "LR(1)パーサジェネレータを自作して構文解析をする �
 そこで、それらの情報取得を担うクラスとしてSyntaxDBクラスを作成します。  
 https://github.com/Tatamo/parsergenerator/blob/master/src/parsergenerator/syntaxdb.ts
 
-```TypeScript
+```ts
 /// syntaxdb.d.ts
 export declare class SyntaxDB {
     private syntax;
@@ -59,7 +59,7 @@ findDefメソッドは愚直に実装した場合、複数回呼ばれるとそ�
 getTokenIdメソッドは後述するアイテム集合部分で使用する必要がありますが、特に厳密なシリアライズや復元可能性を求めているわけではなく、単にハッシュ代わりに使用されます。
 そのため、同一のSyntaxDBインスタンスのgetTokenIdメソッドにトークンを与えると、同一のトークンならば必ず同じ番号が返ってくるようになっていればそれで構いません。
 よって、以下のような単純な実装で事足ります。
-```TypeScript
+```ts
 // Tokenを与えると一意なidを返す
 public getTokenId(token: Token): number{
 	if(!this.tokenmap.has(token)) this.tokenmap.set(token, this.tokenid_counter++);
@@ -80,7 +80,7 @@ public getTokenId(token: Token): number{
 
 https://github.com/Tatamo/parsergenerator/blob/master/src/parsergenerator/closure.ts
 
-```TypeScript
+```ts
 /// closure.d.ts
 export declare class ClosureItem {
     private syntax;
@@ -127,7 +127,7 @@ ClosureSetクラスは複数のClosureItemをまとめた集合を表し、自�
 
 ### クロージャー展開
 
-```TypeScript
+```ts
 // クロージャー展開を行う
 // TODO: リファクタリング
 private expandClosure(){
@@ -213,24 +213,24 @@ ClosureItemは本来複数の先読み記号を保持することができるの
 ハッシュといっても、SHA-1やMD5のようなビット列を出力する必要はなく、要素が同じなら同じ結果が得られ、かつ衝突が発生しなければそれでよいので、単純に要素を文字列化してしまえば事足ります。
 
 たとえば、構文番号1、`.`の位置が左から2番目、先読み記号が`[$,x]`のClosureItemなら、
-```JSON
+```shell
 "1,2,[$,x]"
 ```
 というような文字列を出力すれば目的は果たせます。
 ClosureItemの集合であるClosureSetの場合は、まず自身の持っているClosureItemを、このハッシュ文字列を使ってソートした上で、以下のような文字列を生成します。
-```JSON
+```shell
 "1,2,[$,x]|2,3,[$]"
 ```
 ClosureItemが常にソートされていると仮定したならば、こちらも同一性の判定に用いることができます。
 
 ただしこの場合、ひとつだけ問題が生じます。
 もし上記の`x`のかわりに、`x]|2,2,[y`という名前の終端記号があったとすると、さきほどのClosureSetのハッシュ文字列は
-```JSON
+```shell
 "1,2,[$,x]|2,2,[y]|2,3,[$]"
 ```
 となってしまい、`2,2,[y]`というClosureItemが存在した時に衝突が発生してしまう可能性があります。
 これを防ぐため、先ほどのSyntaxDBを用いて、それぞれの終端記号を個別の数値に直してしまいます。
-```JSON
+```shell
 "1,2,[0,1]"
 "1,2,[0,1]|2,3,[1]"
 ```
@@ -249,7 +249,7 @@ ClosureItemが常にソートされていると仮定したならば、こちら
 DFAGeneratorクラスを作っていきます。  
 https://github.com/Tatamo/parsergenerator/blob/master/src/parsergenerator/dfagenerator.ts
 
-```TypeScript
+```ts
 /// dfagenerator.d.ts
 export declare type DFAEdge = Map<Token, number>;
 export declare type DFANode = {
@@ -281,7 +281,7 @@ DFAEdgeはトークンをキーとしてDFANodeのインデックスを持つMap
 ## 構文解析表の構築
 構文解析表と、それに必要な四種類の命令群を定義しておきます。
 また、コンフリクトが発生したことを表す命令も定義します。
-``` TypeScript
+```ts
 /// parsingtable.ts
 export type ShiftOperation = {type: "shift", to: number};
 export type ReduceOperation = {type: "reduce", syntax: number};
@@ -295,7 +295,7 @@ export type ParsingTable = Array<Map<Token, ParsingOperation>>;
 構文解析表の構築処理は、ParserGeneratorクラスのメソッドとして実装します。  
 https://github.com/Tatamo/parsergenerator/blob/master/src/parsergenerator/parsergenerator.ts
 
-```TypeScript
+```ts
 /// parsergenerator.d.ts
 export declare class ParserGenerator {
     private grammar;

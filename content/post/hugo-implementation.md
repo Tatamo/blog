@@ -38,20 +38,20 @@ Hugoのインストール等については、既に多くの情報がネット�
 
 ### Hugoの基本的なディレクトリ構成
 
-```bash
+```shell
 $ hugo new site name_of_my_site
 ```
 を実行することで、サイト用のディレクトリが生成されます。
 中には、config.tomlといくつかのディレクトリが生成されているはずです。
 config.tomlはサイト全体の設定を記述するファイルです。なお、代わりにconfig.yamlとしてYAMLで記述することなども可能です。お好みで変更しましょう。
-```bash
+```shell
 $ cd name_of_my_site/
 $ ls -p
 archetypes/  config.toml  content/  data/  layouts/  static/
 ```
 
 contentディレクトリは、記事ファイルを配置する場所です。
-```bash
+```shell
 $ hugo new hoge.md
 ```
 などとするとcontent内にmdファイル(記事は主にMarkdownで記述します)が生成されますので、これを編集して記事を作ることになります。
@@ -72,7 +72,7 @@ staticディレクトリには、CSSや画像などの静的なファイルを�
 ### レイアウトしてみる
 #### テーマを使う
 いくつものHugoのレイアウトが[公開されて](https://themes.gohugo.io/)います。基本的には、この中から気に入ったものを使うのが良さそうです。themesディレクトリ直下にテーマごとのディレクトリを作り、その中にテーマファイルを配置します。
-```bash
+```shell
 $ git clone --recursive https://github.com/spf13/hyde themes/hyde
 ```
 テーマを適用するときは、configファイル内でテーマを指定するか、hugoコマンドの実行時に`hugo -t hyde`または`hugo server -t hyde`のように-tオプションでテーマを指定します。ここで指定するテーマ名は、themes直下に配置したディレクトリの名前となります。

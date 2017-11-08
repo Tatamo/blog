@@ -20,7 +20,7 @@ title = "LR(1)パーサジェネレータを自作して構文解析をする �
 ## 構文規則を定義する
 まずは、前回字句規則を定義したように、構文規則を定義していく必要があります。
 
-```TypeScript
+```ts
 export interface LexDefinitionSection{
 	token: Token|null;
 	pattern: string|RegExp;
@@ -44,7 +44,7 @@ export interface GrammarDefinition{
 
 [第1回](/2016/12/22/lr-parser-generator-implementation/)で定義した構文規則をこのデータ形式に直すと、以下のようになります。
 
-```TypeScript
+```ts
 const syntax:SyntaxDefinitions = [
 	{
 		ltoken: "EXP",
@@ -99,7 +99,7 @@ const grammar:GrammarDefinition = {
 実装上難しい点は特にないので、簡単に済ませてしまいましょう。
 
 ひとまず、SymbolDiscriminatorというクラスを作って終端記号と非終端記号の問い合わせをできるようにします。
-```TypeScript
+```ts
 /// symboldiscriminator.d.ts
 export declare class SymbolDiscriminator {
     private terminal_symbols;
@@ -114,7 +114,7 @@ export declare class SymbolDiscriminator {
 実際のコードは以下を参照してください。  
 https://github.com/Tatamo/parsergenerator/blob/master/src/parsergenerator/symboldiscriminator.ts  
 
-```TypeScript
+```ts
 /// コンストラクタの実装のみ抜粋
 constructor(syntaxdef:SyntaxDefinitions){
 	this.terminal_symbols = new Set<Token>();
@@ -165,7 +165,7 @@ First集合はFirst関数などとも呼ばれます。
 しかし、解析したい構文によっては、右辺が存在しない、つまり左辺から空列が導かれるルールが存在することがあります。
 空列とはスペース(空白)等を意味するのではなく、長さ0の入力を意味します。
 具体的には、次のようなルールを見てみましょう。
-```
+```nohighlight
 X -> Y "0"
 Y -> "1"
 Y ->
@@ -175,7 +175,7 @@ Y ->
 よって`X`は、`10`と`0`の2通りが許容されるのです。
 ここで、`Y`は空列となり得るため、Nulls集合に含まれます。
 さらに、次のような例を見てください。
-```
+```nohighlight
 Z -> Y
 Y -> "1"
 Y ->
@@ -190,7 +190,7 @@ Y ->
 なにやら面倒そうですが、実装はそう複雑ではありません。
 NullableSetクラスを作ってみましょう。  
 https://github.com/Tatamo/parsergenerator/blob/master/src/parsergenerator/nullableset.ts
-```TypeScript
+```ts
 /// nullableset.ts
 export class NullableSet{
 	private nulls:Set<Token>;
@@ -279,7 +279,7 @@ Aが終端記号であるなら、`First(A)`は`{A}`(A自身のみを要素と�
 とはいえちょっとコードが長いので、URLから参照をお願いします。
 https://github.com/Tatamo/parsergenerator/blob/master/src/parsergenerator/firstset.ts
 
-```TypeScript
+```ts
 /// firstset.d.ts
 export declare class FirstSet {
     private syntax;

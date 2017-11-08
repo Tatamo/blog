@@ -26,7 +26,7 @@ for i in range(1,101) :
 
 [highlight.js demo](https://highlightjs.org/static/demo/)を見れば、どのようにハイライトされるのか、どのようなテーマがあるのかが簡単にわかるので良いと思います。
 (しかし思うのですが、自分のサイトに導入を検討する際に、この濃い赤色の背景色だと白色の背景と感覚が違ってくるのでやや選びにくいのではないでしょうか……。
-コンソールから`document.body.style.backgroundColor="#FFFFFF";`とでも入力して、背景を白く変更してから見てみるのがいいかもしれません。)
+コンソールから<code class="js">document.body.style.backgroundColor="#FFFFFF";</code>とでも入力して、背景を白く変更してから見てみるのがいいかもしれません。)
 
 
 ## インライン要素でもハイライトできるようにしてみた
@@ -63,6 +63,6 @@ window.addEventListener("DOMContentLoaded", function(){
 またスタイルの指定も同時に行っているので、別途CSSを記述する必要はありません。
 
 既に記事内で何回も使用しているので今更感はありますが、実際にインラインのコードがハイライトされるか見てみましょう。
-たとえば、このように:`print "\n".join(["Fizz"*(not i%3)+"Buzz"*(not i%5) or str(i) for i in range(1,101)])`1行のコードでもうまくハイライトされているのがわかります。
+たとえば、このように:<code class="py">print "\n".join(["Fizz"*(not i%3)+"Buzz"*(not i%5) or str(i) for i in range(1,101)])</code>1行のコードでもうまくハイライトされているのがわかります。
 やったね。
 

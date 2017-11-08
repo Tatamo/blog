@@ -26,7 +26,7 @@ title = "Javaのリフレクションを悪用してクラス設計してみる"
 
 ### ジェネリクスとは
 わざわざ書くまでもないとは思いますが、ジェネリクスについておさらいをしておきます。
-```Java
+```java
 ArrayList<String> strlist = new ArrayList<String>();
 ArrayList<Integer> intlist = new ArrayList<Integer>();
 ```
@@ -34,7 +34,7 @@ ArrayList<T>に対し、ジェネリクスとしてStringやIntegerなど、リ�
 
 ジェネリクスを用いて自分でメソッドを定義する場合は、以下のようになります。
 
-```Java
+```java
 public <T> void doSomething(T arg){
 	// doSomething
 }
@@ -49,7 +49,7 @@ public <T extends SomeClass> void notDoAnything(T arg){
 
 ### ジェネリクスはT.classやnew T()をさせてくれない
 Javaのジェネリクスでは、以下のコードはコンパイルエラーとなります。
-```Java
+```java
 public <T extends SomeClass> List<T> getSubClassList(List<SomeClass> list){
 	return list
 		.stream()
@@ -96,7 +96,7 @@ SomeClassのリストであるlistをイテレートして、それぞれの要�
 あなたはちょっとしたゲームを作るためのフレームワークを作っています。
 その一部分が以下のようになります。
 
-```Java
+```java
 // 抽象的なゲーム内エンティティクラス
 public abstract class Entity {
 	private int x;
@@ -139,7 +139,7 @@ Entityインスタンスを作成するためのFactory Methodパターンを使
 あとは、このフレームワークの利用者にはEntityクラスを継承したクラスを作らせ、それをもとにゲームを作ってもらえればいいだけです。
 以下のクラスを追加してみましょう。
 
-```Java
+```java
 // あなたです
 public class Player extends Entity{
 	private int hp; // プレイヤーはヒットポイントを持ちます
@@ -180,7 +180,7 @@ public class Enemy extends Entity {
 
 ここで、「敵のダメージ値を参照して、プレイヤーのヒットポイントを減らす」処理をしたいという需要が当然生まれます。
 実装の方法はいろいろあると思いますが、ひとまずこの処理を、Enemyのメソッドとして書いてみます。
-```Java
+```java
 // 敵です
 public class Enemy extends Entity {
 	private int damage; // 敵がプレイヤーに与えることのできるダメージ値です
@@ -209,7 +209,7 @@ public class Enemy extends Entity {
 ```
 
 ここであなたは気を利かせます。
-```Java
+```java
 manager.getAll().forEach((entity)->{
 	if(entity instanceof Player){
 		if(...){
@@ -221,7 +221,7 @@ manager.getAll().forEach((entity)->{
 この部分です、どう見ても冗長ですし、いちいち全エンティティのリストをforEachで回しているので高速化も望めませんし、同様のコードクローンが至る所に発生するのは目に見えています。
 
 できるならたとえばこう書きたい。
-```Java
+```java
 manager.<Player>getAllOfSubClass().forEach((player)->{
 	if(...){
 		...
@@ -236,7 +236,7 @@ manager.<Player>getAllOfSubClass().forEach((player)->{
 そういうことはFactory Methodあたりに委譲するべきな気もしますし、うまくやらないとフレームワークの利用者側の負担が増える気もしますが、今は置いておきます。
 
 結局、セーブデータのロード時にこのようなコードを書くことになるでしょう。
-```Java
+```java
 	public <E extends Entity> E createEntity(List<String> args){ // 可変長引数としてもよい
 		return new E(args); // ジェネリクス型はnewできない -> error
 	}
@@ -260,7 +260,7 @@ Javaにはリフレクションという機能があり、プログラムの実�
 これのClass<T>型を、ジェネリクスと併用しましょう。
 `EntityManager#getAllOfSubClass`メソッドを考えてみます。
 実装は以下のようになります。
-```Java
+```java
 	@SuppressWarnings("unchecked")
 	public <E extends Entity> List<E> getAllOfSubClass(Class<E> cls){
 		return (List<E>) all_entities.stream()
@@ -269,18 +269,18 @@ Javaにはリフレクションという機能があり、プログラムの実�
 	}
 ```
 これを呼び出す際は、
-```Java
+```java
 entityManager.getAllOfSubClass(Player.class);
 ```
 のようにして、Class型の`クラス名.class`を引数として与えます。
 ここで型推論が働くので、
-```Java
+```java
 entityManager.<Player>getAllOfSubClass(Player.class);
 ```
 のようにPlayerクラス名を2度も書く必要はありません。
 
 また、Playerクラスだけでなく、Playerクラスを継承したクラスも含めて判別したいときは、以下のようにします。
-```Java
+```java
 	@SuppressWarnings("unchecked")
 	public <E extends Entity> List<E> getAllOfSubClass(Class<E> cls){
 		return (List<E>) all_entities.stream()
@@ -289,7 +289,7 @@ entityManager.<Player>getAllOfSubClass(Player.class);
 	}
 ```
 `createEntity`メソッドも、以下のようにすれば書くことができます。
-```Java
+```java
 	public <E extends Entity> E createEntity(Class<E> cls, List<String> args){
 		// cls型のString[]を引数にとるコンストラクタを呼び出す
 		return cls.getConstructor(new Class<?>[] { String[].class }).newInstance(args);
@@ -300,7 +300,7 @@ entityManager.<Player>getAllOfSubClass(Player.class);
 実際にはE型がString[]を引数にとるコンストラクタを持つということが担保されていないためこれだけでは動かず、例外回避のためにいろいろやる必要があります。
 
 最初の例に戻ってみましょう。`getSubClassList`は、以下のように書けます。
-```Java
+```java
 public <T extends SomeClass> List<T> getSubClassList(List<SomeClass> list, Class<T> cls){
 	return list
 		.stream()
@@ -316,7 +316,7 @@ getSubClassList(list, SubClassOfSomeClass.class);
 
 ### おまけ
 
-```Java
+```java
 public <T> int getStaticValue(Class<T> cls) throws Exception{ // なにがthrows Exceptionだやる気あんのか
 	return (int) cls.getMethod("getStaticValue").invoke(null);
 }
