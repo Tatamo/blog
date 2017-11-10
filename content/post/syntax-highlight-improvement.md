@@ -17,8 +17,9 @@ title = "ブログのシンタックスハイライトを改善しました"
 プログラムの実行結果など、プログラムそのもの以外を<code class="html">&lt;code&gt;</code>タグで囲いたくなる場合が何度かありました。
 class要素に`nohighlight`を指定すればハイライトは行われなくなりますが、highlight.jsのCSSテーマも適用されなくなります。
 
+## インライン要素のハイライトをデフォルトで無効化したい
 さらに、インライン要素のハイライトを行う場合、対象となるコードが短いために言語の自動検出がうまく働かないことが多いです。
-またブロック要素ではMarkdownでcode部分を囲う際に
+ブロック要素ではMarkdownでcode部分を囲う際に
 ````nohighlight
 ```javascript
 /* code */
@@ -56,10 +57,9 @@ window.addEventListener("DOMContentLoaded", () => {
 	}
 }, false);
 ```
-ついでにES6で書きました。
-
-まず、<code class="html">&lt;code&gt;</code>タグでclassの指定が明示的に行われていない場合は自動的に`nohighlight`を追加しています。
+まず、<code class="html">&lt;code&gt;</code>タグでclassの指定が明示的に行われていない場合は自動的に`nohighlight`クラスを追加しています。
 この処理はhighlight.jsでのハイライト化の処理を行う前に持ってきました。
+スタイルの適用も同じように前に持ってきましたが、特に問題はないようです。
 次に、`nohighlight`が指定されていてハイライトが行われていない要素に対して、classにhighlight.jsで使用されているクラスである`hljs`を指定することでテーマの適用を行っています。
 
 あとは既存の記事をこの変更に合わせて修正しました。
