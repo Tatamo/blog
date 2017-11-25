@@ -7,9 +7,7 @@
             {{ with .Params.tags }}<p class="post-list-article-tags">Tag:{{ range . }}
             <a href="/tags/{{ . | urlize}}/">{{ . }}</a>{{ end }}</p>{{ end }}
             <div class="post-content">
-                <p>
-                    {{ .Summary }}
-                </p>
+                {{ .Summary }}
             </div>{{ if .Truncated }}
             <div class="read-more-link">
                 <a href="{{ .RelPermalink }}">Read More...</a>
