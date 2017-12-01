@@ -49,7 +49,7 @@ https://tatamo.github.io/japari-watch/ で公開しており、PCとモバイル
 PC・モバイル両方のブラウザで動作するゲームという方針のため、HTML5 Canvas系のライブラリを使うことにしました。
 npm上で型定義が用意されているものを使いたかったので、今回は[PIXI.js](http://www.pixijs.com/)を選択しました。
 
-<code class="shell">$ npm install --save-dev @types/pixi.js</code>で型定義ファイルをインストールし、
+<code class="shell">$ npm install \-\-save-dev @types/pixi.js</code>で型定義ファイルをインストールし、
 ```TypeScript
 import * as PIXI from "pixi.js";
 ```
@@ -111,7 +111,7 @@ die() {
 `manifest.json`中の相対パスは基準となるディレクトリが`manifest.json`自身となることを知らなかったので、srcパスを`"favicons\/android-icon-***.png"`としたところ、`favicons/favicons/`が読まれてしまって正しくアイコンを配信できなかったりしました。
 
 ## おわりに
-[PIXI.js](http://www.pixijs.com/)はチュートリアルだけは読んだことがあるという状態で、一度実際に使ってみたいと思っていたので今回使用することができて良かったです。
+[PIXI.js](http://www.pixijs.com/)はチュートリアルだけは読んだことがあるという状態で、一度実際に使ってみたいと思っていたので使用することができて良かったです。
 ドキュメントをろくに読み込まずに使いたい機能だけ調べて使うといった感じでしたが、かなり高速にゲーム開発ができたので非常に便利でした。
 またwebpackやBabel、npm scriptsをメインに用いたビルドなどもはじめてだったのですがいい感じにできました。
 
