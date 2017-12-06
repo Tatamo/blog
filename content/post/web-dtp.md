@@ -1,6 +1,6 @@
 +++
-date = "2017-12-06T04:41:00+09:00"
-draft = true
+date = "2017-12-06T18:30:00+09:00"
+draft = false
 slug = ""
 tags = ["html", "css", "vivliostyle", "dtp"]
 categories = ["dev"]
@@ -218,7 +218,7 @@ img {
 ```
 `figcaption::before`の`content`に`counter(fig)`を用いることで、自動的に図表番号を振ることができます。
 
-それに加えて、`figcaption`の持つidに対してリンクを貼り、そのcontentに`target-counter(attr(href), fig)`を指定しています。
+それに加えて、`figcaption`の持つidに対するリンクのcontentに`target-counter(attr(href), fig)`を指定しています。
 これは`attr(href)`---つまりhrefの属性値、`"#fig-nn"`---の地点での`counter(fig)`のカウンタの値を取得しており、つまりその図表に割り当てられた番号が得られます。
 
 これによって相互参照が実現できます。
