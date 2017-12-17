@@ -1,5 +1,5 @@
 +++
-date = "now()"
+date = ""
 draft = false
 slug = ""
 tags = ["", ""]
