@@ -24,7 +24,7 @@ Lenovo ThinkPad X1 Carbon(2017モデル)を買いました。
 * CPU: Core i7-7500U
 * メモリ: 16GB 1866MHz
 * ストレージ: 512GB SSD
-* WLANなし
+* WWANなし
 
 液晶サイズは14型、本体重量はおよそ1.13kgです。
 お値段は約161kでした。
