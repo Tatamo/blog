@@ -1,5 +1,5 @@
 +++
-date = "2018-02-08T00:00:00+09:00"
+date = "2018-02-08T00:30:00+09:00"
 draft = false
 slug = ""
 tags = ["freeciv"]
