@@ -77,7 +77,7 @@ TypeScriptの仕様を全く使っていないJavaScriptを書いたとしても
 モダンなJavaScriptを書きながら競技プログラミングを楽しみたいなら、このサイトはおすすめといえます。
 TypeScriptには対応していませんが、まあトランスパイルされた.jsファイルを提出すれば済む話でしょう。
 
-### [AIZU ONLINE JUDGE](https://qiita.com/konu96/items/0b403c1b32b9dafc5ff9)
+### [AIZU ONLINE JUDGE](http://judge.u-aizu.ac.jp/onlinejudge/)
 * JavaScript node 0.10.36
 
 [http://judge.u-aizu.ac.jp/onlinejudge/AOJ_tutorial.pdf](http://judge.u-aizu.ac.jp/onlinejudge/AOJ_tutorial.pdf) に書いてありました。
