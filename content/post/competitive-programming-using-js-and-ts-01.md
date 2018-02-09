@@ -13,6 +13,8 @@ title = "JavaScript/TypeScriptで競技プログラミングをするには 前�
 
 <!--more-->
 
+追記：[後編](/2018/02/09/competitive-programming-using-js-and-ts-02/)書きました。
+
 競技プログラミングをやるのにC++を選択しない時点で物好きという気はしますが、私は普段からTypeScriptをメインに使って問題を解いています。
 この前AtCoder Problemsに[Language Owners Ranking](http://kenkoooo.com/atcoder/?kind=lang)ができていたので見てみたらTypeScriptで1位を取っていました(2018年2月時点)。
 ちなみにJavaScriptランカーのAC数と比較すると3位にも入れていません。
@@ -98,5 +100,5 @@ JavaScriptの処理系としてnode.jsを使わずにわざわざV8を生で叩�
 ---
 
 ここまで書いていて思った以上に分量が膨らんでしまいました。
-後編では、実際にJavaScript/TypeScriptで問題を解く上で気をつけている点を書いていきます。
+[後編](/2018/02/09/competitive-programming-using-js-and-ts-02/)では、実際にJavaScript/TypeScriptで問題を解く上で気をつけている点を書いていきます。
 
