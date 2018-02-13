@@ -3,7 +3,7 @@ date = "2018-02-09T19:30:00+09:00"
 draft = false
 slug = ""
 tags = ["dev"]
-categories = ["competitive-programming"]
+categories = ["competitive-programming", "javascript"]
 title = "JavaScript/TypeScriptで競技プログラミングをするには 後編"
 
 +++
@@ -20,7 +20,7 @@ title = "JavaScript/TypeScriptで競技プログラミングをするには 後�
 残念ながら、JavaScriptが競技プログラミングに向いていない理由となる仕様がいくつか存在します。
 ### 末尾再帰最適化が実装されていない上にコールスタック上限が小さく、変更できない
 JavaScriptではPythonの`sys.setrecursionlimit()`のように再帰呼び出し回数の最大値を変更することができません。
-コールスタックの上限は処理系に依存しますが、たとえばnode.js v5.12.0では15712です。
+コールスタックの上限は処理系に依存しますが、たとえばnode.js v5.12.0 (x64)では15712です。
 また、末尾再帰最適化はES2015の仕様に盛り込まれていた内容ですが、現在においてもこれを実装している処理系は非常に少ないのが現状です。
 
 これらの要因のため、要素数が数万程度の何かに対して手っ取り早く再帰でDFSを書こうとすると、ほぼ間違いなくMaximum call stack size exceededで落ちます。
@@ -137,12 +137,14 @@ a[0][0] = 1;
  [1,0,0]]
 ```
 となってしまいます。
-そのため、多次元配列を初期化するときは横着せずにforで回すようにします。
+そのため、多次元配列を初期化するときは横着せずにforで回すようにするか、適当な要素を入れてからmapで埋めます。
 ```javascript
 const a = new Array(3);
 for(let i=0; i<3; i++){
 	a[i].push(new Array(3).fill(0));
 }
+
+const a = new Array(3).fill([]).map(()=>new Array(3).fill());
 ```
 
 ---

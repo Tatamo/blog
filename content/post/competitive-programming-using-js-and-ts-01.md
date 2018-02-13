@@ -3,7 +3,7 @@ date = "2018-02-09T17:25:00+09:00"
 draft = false
 slug = ""
 tags = ["dev"]
-categories = ["competitive-programming"]
+categories = ["competitive-programming", "javascript"]
 title = "JavaScript/TypeScriptで競技プログラミングをするには 前編"
 
 +++
