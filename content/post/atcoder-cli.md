@@ -8,7 +8,7 @@ date = "2018-12-07T23:20:00+09:00"
 
 +++
 
-この記事は[Competitive Programming (2) Advent Calendar 2018](https://adventar.org/calendars/3095)の21日の記事です。
+この記事は[Competitive Programming (2) Advent Calendar 2018](https://adventar.org/calendars/3095)の7日の記事です。
 
 ---
 
