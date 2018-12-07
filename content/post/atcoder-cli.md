@@ -3,7 +3,7 @@ title = "コマンドラインツールatcoder-cliを公開しました"
 categories = ["dev"]
 tags = ["competitive-programming", "atcoder", "atcoder-cli"]
 slug = ""
-draft = true
+draft = false
 date = "2018-12-07T23:20:00+09:00"
 
 +++

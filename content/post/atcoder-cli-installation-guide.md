@@ -2,7 +2,7 @@
 categories = ["dev"]
 tags = ["competitive-programming", "atcoder", "atcoder-cli"]
 slug = ""
-draft = true
+draft = false
 date = "2018-12-07T23:21:00+09:00"
 title = "atcoder-cli インストールガイド"
 

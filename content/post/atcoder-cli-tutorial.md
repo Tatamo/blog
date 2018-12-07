@@ -1,7 +1,7 @@
 +++
 tags = ["competitive-programming", "atcoder", "atcoder-cli"]
 slug = ""
-draft = true
+draft = false
 date = "2018-12-07T23:22:00+09:00"
 title = "atcoder-cli チュートリアル"
 categories = ["dev"]
@@ -13,7 +13,7 @@ categories = ["dev"]
 <!--more-->
 
 atcoder-cliは、[AtCoder](https://beta.atcoder.jp/)用のコマンドラインツールです。
-このツールの特徴については、[紹介記事](blog/2018/12/07/atcoder-cli/)をご覧ください。
+このツールの特徴については、[紹介記事](/2018/12/07/atcoder-cli/)をご覧ください。
 
 ## インストール
 
