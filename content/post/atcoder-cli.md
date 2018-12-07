@@ -1,25 +1,27 @@
 +++
 title = "コマンドラインツールatcoder-cliを公開しました"
 categories = ["dev"]
-tags = ["competitive-programming","atcoder"]
+tags = ["competitive-programming", "atcoder", "atcoder-cli"]
 slug = ""
 draft = true
-date = "2018-12-03T00:40:00+09:00"
+date = "2018-12-07T00:40:00+09:00"
 
 +++
 
-[AtCoder](https://beta.atcoder.jp/)で問題を解くためのコマンドラインツール、[atcoder-cli](https://www.npmjs.com/package/atcoder-cli)をリリースしました。
-
+[AtCoder](https://beta.atcoder.jp/)のためのコマンドラインツール、[atcoder-cli](https://www.npmjs.com/package/atcoder-cli)をリリースしました。
 
 <!--more-->
 
 ## モチベーション
+[AtCoder](https://beta.atcoder.jp/)のコンテストで問題を解く際に、問題用のディレクトリを作る、プログラム用のファイルを用意する、問題を解き終わったらソースコードをコピーして提出するなど、プログラムを書く以外の部分で手間がかかることがあります。
+そのため、問題を提出する、プログラムがサンプルケースで失敗しないかチェックする、問題を解くのに必要なファイルやディレクトリを構築する、といった処理をコマンドラインから実行できればコンテスト中の処理の自動化が可能になり、快適に問題を解くことができるようになります。
+
 コマンドラインからAtCoderに問題を提出したりするツールとしては、[online-judge-tools](https://github.com/kmyk/online-judge-tools)などが存在します。
 
 とはいえ、既存のツールでは複数のコンテストサイトを動作対象としていることなどから、「プログラムを提出するたびに提出先の問題IDやURLを指定しなければならない」といった問題点がありました。
 提出ファイルのコピペなどの手間を省くためにコマンドラインツールを使っているはずなのに、その提出先を指定するためにURLをブラウザからコピーしてくる必要があるのでは本末転倒感があります。
 
-また、問題を一問解く度にプログラムのテンプレートを用意し直したりするのも手間がかかります。
+また、問題を一問解く度にプログラムのテンプレートを用意したり、既存ツールを用いてサンプルケースをダウンロードしてくるのも手間がかかります。
 
 そこで、数ある競技プログラミングのサイトの中からAtCoderに特化することで、コンテスト中にコンソールに打ち込むコマンドの数を極限まで減らせるようにするツールとして、[atcoder-cli](https://www.npmjs.com/package/atcoder-cli)を開発しました。
 
@@ -35,7 +37,11 @@ $ acc -v # 正しくインストールされたかどうか確認する
 atcoder-cliはnpmパッケージとして公開しているため、node.jsが必要です。
 また、[online-judge-tools](https://github.com/kmyk/online-judge-tools)はインストールされていなくても問題なく動作しますが、連携機能のため同時にインストールしておくことを強く推奨します。
 
+[atcoder-cli インストールガイド](2018/12/07/atcoder-cli-installation-guide/)を公開していますので、詳しいインストール手順はそちらをお読みください。
+
 ## 特徴
+詳細な機能については[README](https://github.com/Tatamo/atcoder-cli)や`acc [COMMAND] -h`コマンドを参照してください。
+もしくは後で日本語の説明を追加します。
 ### コンテスト情報取得
 ```nohighlight
 $ acc contest abc100
@@ -89,7 +95,7 @@ atcoder-cliでは、コンテストごとにディレクトリを作成してプ
 atcoder-cli本体は今のところAtCoderにファイルを提出する機能を備えていませんが、内側でonline-judge-toolsを呼び出すことにより、もともとのonline-judge-toolsの機能よりもさらに簡単に問題を提出することができるようになっています。
 
 ```sh
-$ oj submit https://beta.atcoder.jp/contests/abc100/tasks/abc100_a main.cpp
+$ oj s https://beta.atcoder.jp/contests/abc100/tasks/abc100_a main.cpp
 ```
 
 online-judge-toolsでは問題の提出のために上記のコマンドが必要でしたが、
@@ -114,14 +120,6 @@ real    0m0.093s
 user    0m0.080s
 sys     0m0.008s
 ```
-
-### 豊富な設定機能
-atcoder-cliのコマンドはオプションによる細かな動作の指定が可能になっていますが、それに加えてグローバルコンフィグによってデフォルト動作の設定を行うことができます。
-```sh
-$ acc config # show all global config options
-$ acc config default-template cpp # デフォルトで使用するテンプレートを"cpp"に指定
-```
-使用ケースに合わせて設定を行っておくことで、aliasコマンドなどを使わなくても頻繁に使用するオプションを省略することができます。
 
 ## 類似ツール
 ### [kmyk/online-judge-tools](https://github.com/kmyk/online-judge-tools)
@@ -156,13 +154,16 @@ npmからインストールすることができ、連携が比較的容易と�
 
 というのも、AtCoder勢で利用していない人はほとんどいないであろう[AtCoder Problems](https://kenkoooo.com/atcoder/)が、その圧倒的な知名度と比較して[GitHubリポジトリ](https://github.com/kenkoooo/AtCoderProblems)についている★の数があまりに少ないのではないか、という話があります。
 
+★とはTwitterの~~ふぁぼ~~いいねのようなものです。
 競プロ勢はGitHubの使い方もよくわからないのだ、という不名誉な評判がつきかねませんから、ぜひ良いと思ったリポジトリには★を投げてみましょう。
 
 ここに[良い練習台 (Tatamo/atcoder-cli)](https://github.com/Tatamo/atcoder-cli)がありますね。
-そういうことです。
-よろしくお願いします。
+
+GitHubのアカウントを持っていない方は、有効なメールアドレスとユーザー名、パスワードだけあれば[https://github.com/join](https://github.com/join)から簡単にアカウントの作成を行うことができます。
+([参考](https://www.google.co.jp/search?q=github+登録))
+
+ログインができたら[適当なソフトウェア (Tatamo/atcoder-cli)](https://github.com/Tatamo/atcoder-cli)のページに行き、ページの上の方にある「★Star」をクリック/タップするだけで★をつけることができます。
 
 (露骨な宣伝で申し訳ありません。
 私のツールに★を投げる必要はありませんが、AtCoder Problemsは実際もっと★がついていてもよいのではと思っています。
-皆さんどんどんGitHubでStarを投げあいましょう)
-
+皆さんどんどんGitHubで★を投げあいましょう)
