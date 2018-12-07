@@ -4,11 +4,13 @@ categories = ["dev"]
 tags = ["competitive-programming", "atcoder", "atcoder-cli"]
 slug = ""
 draft = true
-date = "2018-12-07T00:40:00+09:00"
+date = "2018-12-07T23:20:00+09:00"
 
 +++
 
 [AtCoder](https://beta.atcoder.jp/)のためのコマンドラインツール、[atcoder-cli](https://www.npmjs.com/package/atcoder-cli)をリリースしました。
+
+[インストールガイド](2018/12/07/atcoder-cli-installation-guide/)と[チュートリアル](2018/12/07/atcoder-cli-tutorial/)の記事も用意しています。
 
 <!--more-->
 
@@ -41,7 +43,8 @@ atcoder-cliはnpmパッケージとして公開しているため、node.jsが�
 
 ## 特徴
 詳細な機能については[README](https://github.com/Tatamo/atcoder-cli)や`acc [COMMAND] -h`コマンドを参照してください。
-もしくは後で日本語の説明を追加します。
+日本語の解説記事として、[atcoder-cli チュートリアル](2018/12/07/atcoder-cli-tutorial/)があります。
+
 ### コンテスト情報取得
 ```nohighlight
 $ acc contest abc100

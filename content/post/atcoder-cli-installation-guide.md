@@ -3,7 +3,7 @@ categories = ["dev"]
 tags = ["competitive-programming", "atcoder", "atcoder-cli"]
 slug = ""
 draft = true
-date = "2018-12-07T11:34:17+09:00"
+date = "2018-12-07T23:21:00+09:00"
 title = "atcoder-cli インストールガイド"
 
 +++
@@ -137,3 +137,5 @@ oj -h
 とそれぞれ入力し、ヘルプが表示されることを確認してください。
 
 ここまででインストール作業は完了です。
+
+[atcoder-cli チュートリアル](2018/12/07/atcoder-cli-tutorial/)に進み、atcoder-cliの基本的な使い方を確認しましょう。
