@@ -213,7 +213,7 @@ $ acc submit
 頻繁に使用するテンプレートは、常に`--template`オプションをつけるかわりに、グローバル設定からデフォルトのテンプレートとして設定することが可能です。
 
 ```shell
-$ acc config defaullt-template cpp
+$ acc config default-template cpp
 ```
 
 これにより、`acc new`コマンドと`acc add`コマンドの実行時に自動的に`cpp`テンプレートが使用されるようになります。
