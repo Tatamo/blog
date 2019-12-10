@@ -3,7 +3,7 @@ date = "2019-12-10T23:59:59+09:00"
 draft = false
 slug = ""
 tags = ["automation"]
-categories = ["dev"]
+categories = ["game"]
 title = "自動化というゲームジャンルの成立と変遷"
 
 +++
