@@ -3,7 +3,7 @@
             <section>
                 <h2 class="panel-title">Recent Posts</h2>
                 <ul>
-                {{ range first 6 (where .Site.Pages "Type" "post")}}<li><a href="{{.Permalink}}" class="list-group-item">{{ .Title }}</a></li>
+                {{ range first 6 (where (where .Site.Pages "Type" "post") "Page.Kind" "!=" "section")}}<li><a href="{{.Permalink}}" class="list-group-item">{{ .Title }}</a></li>
                 {{ end }}</ul>
             </section>
             {{ $baseurl := .Site.BaseURL }}
