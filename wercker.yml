@@ -2,7 +2,7 @@ box: debian
 build:
   steps:
     - arjen/hugo-build:
-        version: "0.30"
+        version: "0.74.3"
 deploy:
   steps:
     - install-packages:
