@@ -1,7 +1,7 @@
 +++
 categories = ["diary"]
-date = "2020-08-31T00:28:10+09:00"
-draft = true
+date = "2020-08-31T00:40:10+09:00"
+draft = false
 slug = ""
 tags = ["shukatu"]
 title = "就活の記録"
