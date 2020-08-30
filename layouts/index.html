@@ -1,6 +1,6 @@
 {{ partial "header" . }}
 
-        {{ $paginator := .Paginate (where .Site.Pages.ByDate.Reverse "Type" "post") 8 }}{{ range $paginator.Pages }}
+        {{ $paginator := .Paginate (where (where .Site.Pages.ByDate.Reverse "Type" "post") "Page.Kind" "!=" "section") 8 }}{{ range $paginator.Pages }}
         <article class="post-list-article">
             <h2 class="post-list-article-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
             <span class="post-list-article-datetime"><time>{{ .Date.Format "2006-01-02 15:04:05" }}</time></span>
