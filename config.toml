@@ -13,3 +13,8 @@ twitter_url = "https://twitter.com/__tatamo__"
 github_url = "https://github.com/tatamo"
 copyright_since = "2015"
 copyright_latest = "2015"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+	  unsafe = true
