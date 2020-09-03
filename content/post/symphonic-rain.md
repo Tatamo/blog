@@ -40,7 +40,7 @@ title = "シンフォニック=レインの紹介、またはファルシータ�
 テキスト・グラフィック・サウンドのすべてが一体となって世界観を作り上げているとても良質な作品ですので、これらのページを見て雰囲気が良いなと思った方はすぐに購入してしまって間違いないです。
 おすすめの作品です。
 
-<iframe src="https://store.steampowered.com/widget/629650/" frameborder="0" width="646" height="190"></iframe>
+<iframe src="https://store.steampowered.com/widget/629650/" frameborder="0" width="646" height="190" style="max-width:100%"></iframe>
 
 
 (Steamに毒されてしまったみなさん向けの情報として、Steam版/Switch版ともに時々値下がりします。
