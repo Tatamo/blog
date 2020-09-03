@@ -58,14 +58,22 @@ title = "シンフォニック=レインの紹介、またはファルシータ�
 
 <script>
     function show(){
-        document.getElementById('ff').style.display='';
-        document.getElementById('show').style.display='none';
+        document.getElementById("ff").style.display="";
+        document.getElementById("show_button").style.display="none";
     }
+    document.addEventListener("DOMContentLoaded", ()=>{
+        const span_more = document.querySelector("#more");
+        const button = document.createElement("button");
+        button.id = "show_button";
+        button.textContent = span_more.textContent;
+        span_more.textContent = "";
+        span_more.appendChild(button);
+        button.addEventListener("click", show);
+    });
 </script>
 
-<button id="show", onclick="show()">続きを読む</button>
-<!-- なぜかこのdivの有無によってhugoのパース結果が変わる -->
-<div></div>
+<span id="more">続きを読む</span>
+
 <section id="ff" style="display:none">
 
 ## 時系列
