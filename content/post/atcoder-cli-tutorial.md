@@ -161,7 +161,7 @@ $ acc add -h
 
 また、グローバル設定で設定可能な項目の一覧は、
 ```shell
-$ acc cnfig -h
+$ acc config -h
 ```
 で確認できます。
 
