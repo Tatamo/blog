@@ -141,8 +141,7 @@ oj -h
 [atcoder-cli チュートリアル](2018/12/07/atcoder-cli-tutorial/)に進み、atcoder-cli の基本的な使い方を確認しましょう。
 
 ## トラブルシューティング
-`oj` コマンドのインストールに関する問題が解決しない場合、 [online-judge-tools リポジトリ](https://github.com/kmyk/online-judge-tools) にも案内があるため、そちらも併せて確認してください。 たとえば、 (docs/INSTALL.ja.md
-)[https://github.com/online-judge-tools/oj/blob/master/docs/INSTALL.ja.md]  にはより詳細で正確なインストール手順が書かれています。
+`oj` コマンドのインストールに関する問題が解決しない場合、 [online-judge-tools リポジトリ](https://github.com/kmyk/online-judge-tools) にも案内があるため、そちらも併せて確認してください。 たとえば、 [docs/INSTALL.ja.md](https://github.com/online-judge-tools/oj/blob/master/docs/INSTALL.ja.md)  にはより詳細で正確なインストール手順が書かれています。
 
 ### (Windows) PowerShell で `acc` コマンドが実行できない
 コマンドプロンプト (cmd.exe とタイトルに書かれている黒い画面) ではなく PowerShell (青い画面) を使っている場合、「このシステムではスクリプトの実行が無効になっているため、……」 というようなメッセージが表示されて `acc` コマンドが実行できないことがあります。
@@ -160,12 +159,12 @@ Set-ExecutionPolicy RemoteSigned
 
 * 参考: https://qiita.com/Targityen/items/3d2e0b5b0b7b04963750
 
-### (Mac, Linux) `npm install -g atcoder-cli` すると `ERR` と書かれた行がたくさん表示される
-エラーメッセージをよく見ると、 `permission` がどうとか書かれているかもしれません。
+### (Mac, Linux) `npm install -g atcoder-cli` すると ERR と書かれた行がたくさん表示される
+エラーメッセージをよく見ると、 permission がどうとか書かれているかもしれません。
 公式のインストーラーなどを使用して、すでにシステムに Node.js がインストールされていた場合に発生することがあるようです。
 この記事に書かれた手順に従って Node.js をインストールしなおすことで解消されます(すでにインストールされていた Node.js を個別にアンインストールしたりする必要はないので、そのまま手順通りに進めてください)。
 
-### (Mac, Linux) `oj` コマンドが見つからないといわれる・ `pip3 install online-judge-tools` すると `Permission denied` といわれる
+### (Mac, Linux) `oj` コマンドが見つからないといわれる・ `pip3 install online-judge-tools` すると Permission denied といわれる
 `sudo` コマンドが使える場合、
 ```
 $ sudo pip3 install online-judge-tools
@@ -174,8 +173,7 @@ $ sudo pip3 install online-judge-tools
 `sudo` から始まるコマンドを実行するとパスワードの入力を求められるので、 PC にログインしているユーザーのパスワードを入力します。
 セキュリティのためにパスワードを入力しても画面に文字が何も表示されないはずですが、内容は読み取られているので正しくパスワードを入力してエンターキーを押してください。
 
-または、 online-judge-tools のインストールドキュメント ((docs/INSTALL.ja.md
-)[https://github.com/online-judge-tools/oj/blob/master/docs/INSTALL.ja.md]) を読み、 `~/.local/bin` を `PATH` に追加してから
+または、 online-judge-tools のインストールドキュメント ([docs/INSTALL.ja.md](https://github.com/online-judge-tools/oj/blob/master/docs/INSTALL.ja.md)) を読み、 `~/.local/bin` を `PATH` に追加してから
 ```
 $ pip3 install --user online-judge-tools
 ```
